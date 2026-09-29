@@ -82,6 +82,11 @@ function Footer() {
             <h6 className="text-white mb-3">Support</h6>
             <ul className="list-unstyled mb-0">
               <li className="mb-2">
+                <Link to="/orders" className="footer-link">
+                  My Orders
+                </Link>
+              </li>
+              <li className="mb-2">
                 <Link to="/track-order" className="footer-link">
                   Track Order
                 </Link>

@@ -287,11 +287,14 @@ function Profile() {
               </div>
             )}
 
-            <div className="d-flex gap-2 mt-4 pt-3 border-top">
-              <Link to="/product" className="btn btn-primary cta-button">
+            <div className="d-flex flex-wrap gap-2 mt-4 pt-3 border-top">
+              <Link to="/orders" className="btn btn-primary cta-button">
+                My Orders
+              </Link>
+              <Link to="/product" className="btn btn-outline-primary">
                 Browse Shop
               </Link>
-              <Link to="/cart" className="btn btn-outline-primary">
+              <Link to="/cart" className="btn btn-outline-secondary">
                 View Cart
               </Link>
             </div>
