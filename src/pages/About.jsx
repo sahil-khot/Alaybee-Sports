@@ -35,7 +35,7 @@ function About() {
           </p>
           <ul className="list-group list-group-flush border rounded-4 overflow-hidden">
             <li className="list-group-item">
-              Sports equipment manufacturer since 1988
+              Sports equipment manufacturer since 2018
             </li>
             <li className="list-group-item">
               Premium quality goods for every sport

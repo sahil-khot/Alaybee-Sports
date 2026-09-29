@@ -102,6 +102,10 @@ function ProductDetailModal({
                   maxHeight: "360px",
                   objectFit: "cover",
                 }}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80";
+                }}
               />
               {product.discount && (
                 <span className="badge badge-discount position-absolute top-0 start-0 m-3 shadow-sm">
@@ -279,7 +283,7 @@ function ProductDetailModal({
                     <input
                       type="text"
                       className="form-control form-control-sm"
-                      placeholder="e.g. Sahil"
+                      placeholder="e.g. Alex"
                       value={reviewName}
                       onChange={(e) => setReviewName(e.target.value)}
                       required

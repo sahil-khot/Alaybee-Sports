@@ -18,45 +18,53 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
   const categories = [
     {
       name: "Cricket",
-      image:
-        "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=400&q=80",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
     {
       name: "Football",
-      image:
-        "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=400&q=80",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
     {
       name: "Basketball",
-      image:
-        "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=400&q=80",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
     {
       name: "Tennis",
-      image:
-        "https://images.pexels.com/photos/5739117/pexels-photo-5739117.jpeg?auto=compress&cs=tinysrgb&w=400",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
     {
       name: "Badminton",
-      image:
-        "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=400&q=80",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
     {
       name: "Cycling",
-      image:
-        "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=400&q=80",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
     {
       name: "Fitness",
-      image:
-        "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=400&q=80",
-      itemsCount: "10 Items",
+      image: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
+    },
+    {
+      name: "Running",
+      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
+    },
+    {
+      name: "Swimming",
+      image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
+    },
+    {
+      name: "Boxing",
+      image: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=400&q=80",
+      itemsCount: "16 Items",
     },
   ];
 
@@ -100,6 +108,10 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
                     className="w-100 h-100"
                     alt={cat.name}
                     style={{ objectFit: "cover" }}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=400&q=80";
+                    }}
                   />
                 </div>
                 <div className="card-body py-2 px-1">
@@ -159,7 +171,7 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
             </span>
             <h2 className="fw-bold mb-3">Why athletes choose Alaybee Sports</h2>
             <p className="text-muted mb-4">
-              Since 1988, we have been outfitting grassroots cricket clubs, school
+              Since 2018, we have been outfitting grassroots cricket clubs, school
               teams, state athletes, and weekend fitness enthusiasts with
               uncompromising gear.
             </p>

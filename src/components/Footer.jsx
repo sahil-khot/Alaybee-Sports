@@ -19,7 +19,7 @@ function Footer() {
               />
               <h5 className="fw-bold text-white mb-0">Alaybee Sports</h5>
             </div>
-            <p className="text-light mb-2">Sports Sales Since 1988</p>
+            <p className="text-light mb-2">Sports Sales Since 2018</p>
             <p className="text-secondary mb-0">
               Premium sports equipment and accessories for athletes, schools,
               clubs, and active families.
@@ -96,11 +96,7 @@ function Footer() {
                   Offers
                 </Link>
               </li>
-              <li className="mb-2">
-                <Link to="/blog" className="footer-link">
-                  News
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>

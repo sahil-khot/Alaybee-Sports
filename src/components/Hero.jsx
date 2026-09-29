@@ -21,7 +21,7 @@ function Hero() {
           <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25 mb-3 text-white">
             <FaShieldAlt className="text-warning" size={13} />
             <span style={{ fontSize: "0.85rem", color: "#ffffff", fontWeight: 500 }}>
-              Direct Manufacturer Quality Since 1988
+              Direct Manufacturer Quality Since 2018
             </span>
           </div>
 
@@ -42,7 +42,7 @@ function Hero() {
               textShadow: "0 2px 8px rgba(0,0,0,0.7)",
             }}
           >
-            Sports Sales Since 1988
+            Sports Sales Since 2018
           </p>
           <p
             className="col-lg-8 mx-auto mb-4 text-white"

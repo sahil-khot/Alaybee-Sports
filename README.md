@@ -4,7 +4,6 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A modern, responsive full-stack sports equipment e-commerce platform built with **React (Vite)**, **Bootstrap 5**, **React Icons**, **Node.js/Express**, and **MongoDB Atlas** with JWT authentication and role-based privileges.
 
@@ -12,15 +11,15 @@ A modern, responsive full-stack sports equipment e-commerce platform built with 
 
 ## ✨ Features
 
-- **🎯 7 Sports Categories with 70+ Verified Items**:
-  - Cricket, Football, Basketball, Tennis, Badminton, Cycling, and Fitness.
-  - Complete with real images, INR pricing, original prices, discount tags, ratings, and specifications.
+- **🎯 10 Sports Categories with 160 Curated Items (16 per category)**:
+  - Cricket, Football, Basketball, Tennis, Badminton, Cycling, Fitness, Running, Swimming, and Boxing.
+  - Complete with high-resolution imagery, INR pricing, original prices, discount tags, ratings, and specifications.
 - **🔍 Seamless Category Navigation**:
   - Direct 1-click filtering from Home "Shop By Categories" into specific sport catalogs.
   - Category page displays 3 featured items per sport with direct click-through redirection.
 - **⭐ Interactive Product Details & Customer Reviews**:
   - Click any product card to launch a full-detail modal.
-  - View verified customer reviews, star breakdown, key highlights, and submit live reviews.
+  - View 2 to 3 verified customer reviews per item, star breakdown, key highlights, and submit live reviews.
 - **🛒 Dynamic Shopping Cart & Wishlist**:
   - Real-time quantity adjustments, price calculations, shipping, and persistent wishlist saving.
 - **🔐 JWT Authentication & Demo Accounts**:
@@ -62,7 +61,7 @@ Alaybee-Sports/
 │   │   ├── ProductDetailModal.jsx
 │   │   └── ProtectedRoute.jsx
 │   ├── context/            # AuthContext for user state
-│   ├── data/               # 70-product sports catalog
+│   ├── data/               # 160-product sports catalog (10 categories x 16 items)
 │   │   └── products.js
 │   ├── pages/              # Route pages (Home, Shop, Categories, Cart, Wishlist, etc.)
 │   ├── App.jsx             # Main routing and global state

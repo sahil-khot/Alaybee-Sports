@@ -102,7 +102,7 @@ function Register() {
                   name="name"
                   required
                   className="form-control"
-                  placeholder="e.g. Sahil Khan"
+                  placeholder="e.g. Alex Morgan"
                   value={formData.name}
                   onChange={handleChange}
                 />

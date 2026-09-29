@@ -34,7 +34,7 @@ function Navbar({ cartCount, wishlistCount }) {
           />
           <div className="d-flex flex-column">
             <span className="fs-4 fw-bold text-primary lh-1">Alaybee Sports</span>
-            <span className="brand-subtitle mt-1">Sports Sales Since 1988</span>
+            <span className="brand-subtitle mt-1">Sports Sales Since 2018</span>
           </div>
         </NavLink>
 
@@ -77,11 +77,7 @@ function Navbar({ cartCount, wishlistCount }) {
                 Deals
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/blog" className={linkClass}>
-                Blog
-              </NavLink>
-            </li>
+
             <li className="nav-item">
               <NavLink to="/contact" className={linkClass}>
                 Contact

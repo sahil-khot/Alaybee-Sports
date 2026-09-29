@@ -36,6 +36,10 @@ function ProductCard({ product, onAddToCart, onToggleWishlist, isSaved, onSelect
           className="card-img-top w-100 h-100"
           alt={product.name}
           style={{ objectFit: "cover", transition: "transform 0.3s ease" }}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80";
+          }}
         />
         {product.discount && (
           <span className="badge badge-discount position-absolute top-0 start-0 m-3 shadow-sm">
