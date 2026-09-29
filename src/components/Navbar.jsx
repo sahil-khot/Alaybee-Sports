@@ -77,6 +77,11 @@ function Navbar({ cartCount, wishlistCount }) {
                 Deals
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/best-sellers" className={linkClass}>
+                Best Sellers
+              </NavLink>
+            </li>
 
             <li className="nav-item">
               <NavLink to="/contact" className={linkClass}>

@@ -13,7 +13,9 @@ A modern, responsive full-stack sports equipment e-commerce platform built with 
 
 - **🎯 10 Sports Categories with 160 Curated Items (16 per category)**:
   - Cricket, Football, Basketball, Tennis, Badminton, Cycling, Fitness, Running, Swimming, and Boxing.
-  - Complete with high-resolution imagery, INR pricing, original prices, discount tags, ratings, and specifications.
+  - Complete with 160 unique high-resolution images (zero repeating images), INR pricing, original prices, discount tags, ratings, and specifications.
+- **🔥 Dedicated Best Sellers Section**:
+  - Direct header access to top-performing gear rated 4.8+ with quick category filtering and live search.
 - **🔍 Seamless Category Navigation**:
   - Direct 1-click filtering from Home "Shop By Categories" into specific sport catalogs.
   - Category page displays 3 featured items per sport with direct click-through redirection.
@@ -161,6 +163,7 @@ On the `/login` page, you can click either quick-login button to test:
 
 - `npm run dev`: Starts the Vite development server on port 5173.
 - `npm run server`: Starts the Express backend on port 5000.
+- `npm run seed:products`: Seeds all 160 curated products into MongoDB Atlas.
 - `npm run build`: Builds the production bundle with Vite.
 - `npm run preview`: Locally previews the production build.
 

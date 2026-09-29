@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "server": "node server/server.js",
+    "seed:products": "node server/data/seedProducts.js",
     "build": "vite build",
     "preview": "vite preview"
   },

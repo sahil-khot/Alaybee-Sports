@@ -7,6 +7,7 @@ import About from "./pages/About.jsx";
 import Product from "./pages/Product.jsx";
 import Categories from "./pages/Categories.jsx";
 import Deals from "./pages/Deals.jsx";
+import BestSellers from "./pages/BestSellers.jsx";
 import Contact from "./pages/Contact.jsx";
 import Cart from "./pages/Cart.jsx";
 import Checkout from "./pages/Checkout.jsx";
@@ -125,6 +126,17 @@ function App() {
               path="/deals"
               element={
                 <Deals
+                  products={products}
+                  onAddToCart={addToCart}
+                  onToggleWishlist={toggleWishlist}
+                  wishlist={wishlist}
+                />
+              }
+            />
+            <Route
+              path="/best-sellers"
+              element={
+                <BestSellers
                   products={products}
                   onAddToCart={addToCart}
                   onToggleWishlist={toggleWishlist}

@@ -8,10 +8,10 @@ export const products = [
     "price": 5499,
     "oldPrice": 7499,
     "discount": 27,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -33,7 +33,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 2,
@@ -44,10 +45,10 @@ export const products = [
     "price": 1299,
     "oldPrice": 1699,
     "discount": 24,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -76,7 +77,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 3,
@@ -87,8 +89,8 @@ export const products = [
     "price": 2599,
     "oldPrice": 3499,
     "discount": 26,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -112,7 +114,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 4,
@@ -123,8 +126,8 @@ export const products = [
     "price": 1999,
     "oldPrice": 2699,
     "discount": 26,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -155,7 +158,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 5,
@@ -166,8 +170,8 @@ export const products = [
     "price": 1499,
     "oldPrice": 1999,
     "discount": 25,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -191,7 +195,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 6,
@@ -202,10 +207,10 @@ export const products = [
     "price": 3199,
     "oldPrice": 4499,
     "discount": 29,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589487391730-58f20eb2c308?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -234,7 +239,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 7,
@@ -245,10 +251,10 @@ export const products = [
     "price": 949,
     "oldPrice": 1399,
     "discount": 32,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -270,21 +276,22 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 8,
-    "name": "Wicket Keeping Pro Gloves with Gel Cushion Inners",
+    "name": "Wicket Keeping Pro Gloves with Gel Inners",
     "category": "Cricket",
     "brand": "Alaybee Pro",
     "description": "High performance cricket equipment engineered for rigorous training and competitive tournament play.",
     "price": 1899,
     "oldPrice": 2499,
     "discount": 24,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -313,7 +320,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 9,
@@ -324,10 +332,10 @@ export const products = [
     "price": 2899,
     "oldPrice": 3899,
     "discount": 26,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512719994953-eabf50895df7?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -349,7 +357,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 10,
@@ -360,10 +369,10 @@ export const products = [
     "price": 849,
     "oldPrice": 1299,
     "discount": 35,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -392,7 +401,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 11,
@@ -403,10 +413,10 @@ export const products = [
     "price": 1199,
     "oldPrice": 1599,
     "discount": 25,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1563299796-17596ed6b017?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -428,7 +438,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 12,
@@ -439,10 +450,10 @@ export const products = [
     "price": 799,
     "oldPrice": 1099,
     "discount": 27,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -471,7 +482,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 13,
@@ -482,10 +494,10 @@ export const products = [
     "price": 1999,
     "oldPrice": 2799,
     "discount": 29,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -507,7 +519,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 14,
@@ -518,10 +531,10 @@ export const products = [
     "price": 799,
     "oldPrice": 1199,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -550,7 +563,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 15,
@@ -561,10 +575,10 @@ export const products = [
     "price": 349,
     "oldPrice": 499,
     "discount": 30,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -586,7 +600,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 16,
@@ -597,10 +612,10 @@ export const products = [
     "price": 2199,
     "oldPrice": 2999,
     "discount": 27,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -629,7 +644,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 17,
@@ -640,8 +656,8 @@ export const products = [
     "price": 1599,
     "oldPrice": 2299,
     "discount": 30,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -665,7 +681,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 18,
@@ -676,8 +693,8 @@ export const products = [
     "price": 3499,
     "oldPrice": 4699,
     "discount": 26,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -708,7 +725,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 19,
@@ -719,8 +737,8 @@ export const products = [
     "price": 1799,
     "oldPrice": 2499,
     "discount": 28,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -744,7 +762,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 20,
@@ -755,10 +774,10 @@ export const products = [
     "price": 649,
     "oldPrice": 899,
     "discount": 28,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -787,7 +806,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 21,
@@ -798,10 +818,10 @@ export const products = [
     "price": 949,
     "oldPrice": 1399,
     "discount": 32,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -823,7 +843,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 22,
@@ -834,10 +855,10 @@ export const products = [
     "price": 2299,
     "oldPrice": 3199,
     "discount": 28,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -866,7 +887,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 23,
@@ -877,10 +899,10 @@ export const products = [
     "price": 1099,
     "oldPrice": 1599,
     "discount": 31,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -902,7 +924,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 24,
@@ -913,10 +936,10 @@ export const products = [
     "price": 549,
     "oldPrice": 799,
     "discount": 31,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -945,7 +968,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 25,
@@ -956,10 +980,10 @@ export const products = [
     "price": 599,
     "oldPrice": 899,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -981,7 +1005,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 26,
@@ -992,10 +1017,10 @@ export const products = [
     "price": 449,
     "oldPrice": 649,
     "discount": 31,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1024,7 +1049,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 27,
@@ -1035,10 +1061,10 @@ export const products = [
     "price": 2499,
     "oldPrice": 3299,
     "discount": 24,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1060,7 +1086,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 28,
@@ -1071,10 +1098,10 @@ export const products = [
     "price": 899,
     "oldPrice": 1299,
     "discount": 31,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1103,7 +1130,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 29,
@@ -1114,10 +1142,10 @@ export const products = [
     "price": 499,
     "oldPrice": 799,
     "discount": 38,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1139,7 +1167,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 30,
@@ -1150,10 +1179,10 @@ export const products = [
     "price": 2999,
     "oldPrice": 4199,
     "discount": 29,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1182,7 +1211,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 31,
@@ -1193,10 +1223,10 @@ export const products = [
     "price": 199,
     "oldPrice": 299,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1218,7 +1248,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 32,
@@ -1229,10 +1260,10 @@ export const products = [
     "price": 899,
     "oldPrice": 1299,
     "discount": 31,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1261,7 +1292,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 33,
@@ -1272,8 +1304,8 @@ export const products = [
     "price": 1299,
     "oldPrice": 1799,
     "discount": 28,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -1297,7 +1329,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 34,
@@ -1308,10 +1341,10 @@ export const products = [
     "price": 3999,
     "oldPrice": 5499,
     "discount": 27,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1340,7 +1373,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 35,
@@ -1351,10 +1385,10 @@ export const products = [
     "price": 2699,
     "oldPrice": 3699,
     "discount": 27,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1376,7 +1410,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 36,
@@ -1387,10 +1422,10 @@ export const products = [
     "price": 649,
     "oldPrice": 949,
     "discount": 32,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1419,7 +1454,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 37,
@@ -1430,10 +1466,10 @@ export const products = [
     "price": 549,
     "oldPrice": 799,
     "discount": 31,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1455,7 +1491,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 38,
@@ -1466,10 +1503,10 @@ export const products = [
     "price": 399,
     "oldPrice": 599,
     "discount": 33,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1498,7 +1535,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 39,
@@ -1509,10 +1547,10 @@ export const products = [
     "price": 1499,
     "oldPrice": 2099,
     "discount": 29,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80&sig=39",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1534,7 +1572,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 40,
@@ -1545,10 +1584,10 @@ export const products = [
     "price": 749,
     "oldPrice": 999,
     "discount": 25,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80&sig=40",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1577,7 +1616,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 41,
@@ -1588,10 +1628,10 @@ export const products = [
     "price": 799,
     "oldPrice": 1199,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=600&q=80&sig=41",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1613,7 +1653,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 42,
@@ -1624,10 +1665,10 @@ export const products = [
     "price": 1299,
     "oldPrice": 1799,
     "discount": 28,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80&sig=42",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1656,7 +1697,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 43,
@@ -1667,10 +1709,10 @@ export const products = [
     "price": 1599,
     "oldPrice": 2199,
     "discount": 27,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=600&q=80&sig=43",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1692,7 +1734,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 44,
@@ -1703,10 +1746,10 @@ export const products = [
     "price": 699,
     "oldPrice": 999,
     "discount": 30,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=600&q=80&sig=44",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1735,7 +1778,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 45,
@@ -1746,10 +1790,10 @@ export const products = [
     "price": 8999,
     "oldPrice": 11999,
     "discount": 25,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=600&q=80&sig=45",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1771,7 +1815,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 46,
@@ -1782,10 +1827,10 @@ export const products = [
     "price": 1899,
     "oldPrice": 2499,
     "discount": 24,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80&sig=46",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1814,7 +1859,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 47,
@@ -1825,10 +1871,10 @@ export const products = [
     "price": 2499,
     "oldPrice": 3499,
     "discount": 29,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=600&q=80&sig=47",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1850,7 +1896,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 48,
@@ -1861,10 +1908,10 @@ export const products = [
     "price": 699,
     "oldPrice": 999,
     "discount": 30,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80&sig=48",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -1893,7 +1940,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 49,
@@ -1904,8 +1952,8 @@ export const products = [
     "price": 4299,
     "oldPrice": 5999,
     "discount": 28,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -1929,7 +1977,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 50,
@@ -1940,8 +1989,8 @@ export const products = [
     "price": 449,
     "oldPrice": 599,
     "discount": 25,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -1972,7 +2021,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 51,
@@ -1983,8 +2033,8 @@ export const products = [
     "price": 2999,
     "oldPrice": 4199,
     "discount": 29,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -2008,7 +2058,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 52,
@@ -2019,8 +2070,8 @@ export const products = [
     "price": 2499,
     "oldPrice": 3499,
     "discount": 29,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -2051,7 +2102,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 53,
@@ -2062,8 +2114,8 @@ export const products = [
     "price": 549,
     "oldPrice": 849,
     "discount": 35,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
     "image": "https://images.unsplash.com/photo-1530915536848-181b53f65e2b?auto=format&fit=crop&w=600&q=80",
     "features": [
@@ -2087,7 +2139,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 54,
@@ -2098,10 +2151,10 @@ export const products = [
     "price": 1999,
     "oldPrice": 2799,
     "discount": 29,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2130,7 +2183,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 55,
@@ -2141,10 +2195,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2166,7 +2220,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 56,
@@ -2177,10 +2232,10 @@ export const products = [
     "price": 749,
     "oldPrice": 1099,
     "discount": 32,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1613918108466-292b78a8ef95?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2209,7 +2264,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 57,
@@ -2220,10 +2276,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1521537634581-0dced2fed2a8?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2245,7 +2301,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 58,
@@ -2256,10 +2313,10 @@ export const products = [
     "price": 2899,
     "oldPrice": 3799,
     "discount": 24,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1530915536848-181b53f65e2b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2288,7 +2345,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 59,
@@ -2299,10 +2357,10 @@ export const products = [
     "price": 899,
     "oldPrice": 1299,
     "discount": 31,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2324,7 +2382,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 60,
@@ -2335,10 +2394,10 @@ export const products = [
     "price": 349,
     "oldPrice": 499,
     "discount": 30,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2367,7 +2426,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 61,
@@ -2378,10 +2438,10 @@ export const products = [
     "price": 1899,
     "oldPrice": 2599,
     "discount": 27,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2403,7 +2463,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 62,
@@ -2414,10 +2475,10 @@ export const products = [
     "price": 999,
     "oldPrice": 1499,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80&sig=62",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2446,7 +2507,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 63,
@@ -2457,10 +2519,10 @@ export const products = [
     "price": 449,
     "oldPrice": 699,
     "discount": 36,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1530915536848-181b53f65e2b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1613918108466-292b78a8ef95?auto=format&fit=crop&w=600&q=80&sig=63",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2482,7 +2544,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 64,
@@ -2493,10 +2556,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1521537634581-0dced2fed2a8?auto=format&fit=crop&w=600&q=80&sig=64",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2525,7 +2588,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 65,
@@ -2536,10 +2600,10 @@ export const products = [
     "price": 2199,
     "oldPrice": 2999,
     "discount": 27,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80&sig=65",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2561,7 +2625,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 66,
@@ -2572,10 +2637,10 @@ export const products = [
     "price": 1099,
     "oldPrice": 1499,
     "discount": 27,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1613918108466-292b78a8ef95?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1613918108466-292b78a8ef95?auto=format&fit=crop&w=600&q=80&sig=66",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2604,7 +2669,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 67,
@@ -2615,10 +2681,10 @@ export const products = [
     "price": 2399,
     "oldPrice": 3299,
     "discount": 27,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1521537634581-0dced2fed2a8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1521537634581-0dced2fed2a8?auto=format&fit=crop&w=600&q=80&sig=67",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2640,7 +2706,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 68,
@@ -2651,10 +2718,10 @@ export const products = [
     "price": 749,
     "oldPrice": 1099,
     "discount": 32,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80&sig=68",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2683,7 +2750,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 69,
@@ -2694,10 +2762,10 @@ export const products = [
     "price": 499,
     "oldPrice": 699,
     "discount": 29,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80&sig=69",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2719,7 +2787,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 70,
@@ -2730,10 +2799,10 @@ export const products = [
     "price": 1699,
     "oldPrice": 2299,
     "discount": 26,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80&sig=70",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2762,7 +2831,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 71,
@@ -2773,10 +2843,10 @@ export const products = [
     "price": 1899,
     "oldPrice": 2599,
     "discount": 27,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1613918108466-292b78a8ef95?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80&sig=71",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2798,7 +2868,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 72,
@@ -2809,10 +2880,10 @@ export const products = [
     "price": 399,
     "oldPrice": 599,
     "discount": 33,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1521537634581-0dced2fed2a8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80&sig=72",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2841,7 +2912,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 73,
@@ -2852,10 +2924,10 @@ export const products = [
     "price": 449,
     "oldPrice": 649,
     "discount": 31,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80&sig=73",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2877,7 +2949,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 74,
@@ -2888,10 +2961,10 @@ export const products = [
     "price": 1199,
     "oldPrice": 1699,
     "discount": 29,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80&sig=74",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2920,7 +2993,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 75,
@@ -2931,10 +3005,10 @@ export const products = [
     "price": 549,
     "oldPrice": 799,
     "discount": 31,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80&sig=75",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2956,7 +3030,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 76,
@@ -2967,10 +3042,10 @@ export const products = [
     "price": 249,
     "oldPrice": 399,
     "discount": 38,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1613918108466-292b78a8ef95?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80&sig=76",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -2999,7 +3074,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 77,
@@ -3010,10 +3086,10 @@ export const products = [
     "price": 199,
     "oldPrice": 299,
     "discount": 33,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1521537634581-0dced2fed2a8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80&sig=77",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3035,7 +3111,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 78,
@@ -3046,10 +3123,10 @@ export const products = [
     "price": 2799,
     "oldPrice": 3899,
     "discount": 28,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80&sig=78",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3078,7 +3155,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 79,
@@ -3089,10 +3167,10 @@ export const products = [
     "price": 1199,
     "oldPrice": 1599,
     "discount": 25,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80&sig=79",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3114,7 +3192,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 80,
@@ -3125,10 +3204,10 @@ export const products = [
     "price": 2999,
     "oldPrice": 4299,
     "discount": 30,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1530915536848-181b53f65e2b?auto=format&fit=crop&w=600&q=80&sig=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3157,7 +3236,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 81,
@@ -3168,10 +3248,10 @@ export const products = [
     "price": 16499,
     "oldPrice": 22999,
     "discount": 28,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80&sig=81",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3193,7 +3273,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 82,
@@ -3204,10 +3285,10 @@ export const products = [
     "price": 1599,
     "oldPrice": 2299,
     "discount": 30,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80&sig=82",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3236,7 +3317,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 83,
@@ -3247,10 +3329,10 @@ export const products = [
     "price": 999,
     "oldPrice": 1399,
     "discount": 29,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80&sig=83",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3272,7 +3354,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 84,
@@ -3283,10 +3366,10 @@ export const products = [
     "price": 549,
     "oldPrice": 849,
     "discount": 35,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80&sig=84",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3315,7 +3398,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 85,
@@ -3326,10 +3410,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=600&q=80&sig=85",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3351,7 +3435,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 86,
@@ -3362,10 +3447,10 @@ export const products = [
     "price": 849,
     "oldPrice": 1299,
     "discount": 35,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80&sig=86",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3394,7 +3479,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 87,
@@ -3405,10 +3491,10 @@ export const products = [
     "price": 949,
     "oldPrice": 1499,
     "discount": 37,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80&sig=87",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3430,7 +3516,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 88,
@@ -3441,10 +3528,10 @@ export const products = [
     "price": 599,
     "oldPrice": 899,
     "discount": 33,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80&sig=88",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3473,7 +3560,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 89,
@@ -3484,10 +3572,10 @@ export const products = [
     "price": 549,
     "oldPrice": 799,
     "discount": 31,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80&sig=89",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3509,7 +3597,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 90,
@@ -3520,10 +3609,10 @@ export const products = [
     "price": 449,
     "oldPrice": 649,
     "discount": 31,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80&sig=90",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3552,7 +3641,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 91,
@@ -3563,10 +3653,10 @@ export const products = [
     "price": 399,
     "oldPrice": 599,
     "discount": 33,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80&sig=91",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3588,7 +3678,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 92,
@@ -3599,10 +3690,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80&sig=92",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3631,7 +3722,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 93,
@@ -3642,10 +3734,10 @@ export const products = [
     "price": 899,
     "oldPrice": 1299,
     "discount": 31,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80&sig=93",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3667,7 +3759,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 94,
@@ -3678,10 +3771,10 @@ export const products = [
     "price": 1499,
     "oldPrice": 2099,
     "discount": 29,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80&sig=94",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3710,7 +3803,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 95,
@@ -3721,10 +3815,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80&sig=95",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3746,7 +3840,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 96,
@@ -3757,10 +3852,10 @@ export const products = [
     "price": 1299,
     "oldPrice": 1899,
     "discount": 32,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80&sig=96",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3789,7 +3884,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 97,
@@ -3800,10 +3896,10 @@ export const products = [
     "price": 2699,
     "oldPrice": 3699,
     "discount": 27,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3825,7 +3921,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 98,
@@ -3836,10 +3933,10 @@ export const products = [
     "price": 549,
     "oldPrice": 849,
     "discount": 35,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3868,7 +3965,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 99,
@@ -3879,10 +3977,10 @@ export const products = [
     "price": 1099,
     "oldPrice": 1599,
     "discount": 31,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3904,7 +4002,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 100,
@@ -3915,10 +4014,10 @@ export const products = [
     "price": 399,
     "oldPrice": 649,
     "discount": 39,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3947,7 +4046,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 101,
@@ -3958,10 +4058,10 @@ export const products = [
     "price": 1499,
     "oldPrice": 2199,
     "discount": 32,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -3983,7 +4083,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 102,
@@ -3994,10 +4095,10 @@ export const products = [
     "price": 749,
     "oldPrice": 1099,
     "discount": 32,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4026,7 +4127,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 103,
@@ -4037,10 +4139,10 @@ export const products = [
     "price": 699,
     "oldPrice": 999,
     "discount": 30,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4062,7 +4164,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 104,
@@ -4073,10 +4176,10 @@ export const products = [
     "price": 399,
     "oldPrice": 599,
     "discount": 33,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4105,7 +4208,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 105,
@@ -4116,10 +4220,10 @@ export const products = [
     "price": 849,
     "oldPrice": 1299,
     "discount": 35,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4141,7 +4245,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 106,
@@ -4152,10 +4257,10 @@ export const products = [
     "price": 2199,
     "oldPrice": 2999,
     "discount": 27,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4184,7 +4289,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 107,
@@ -4195,10 +4301,10 @@ export const products = [
     "price": 4999,
     "oldPrice": 6999,
     "discount": 29,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4220,7 +4326,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 108,
@@ -4231,10 +4338,10 @@ export const products = [
     "price": 1899,
     "oldPrice": 2599,
     "discount": 27,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4263,7 +4370,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 109,
@@ -4274,10 +4382,10 @@ export const products = [
     "price": 249,
     "oldPrice": 399,
     "discount": 38,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1560090995-01632a28895b?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4299,7 +4407,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 110,
@@ -4310,10 +4419,10 @@ export const products = [
     "price": 699,
     "oldPrice": 999,
     "discount": 30,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4342,7 +4451,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 111,
@@ -4353,10 +4463,10 @@ export const products = [
     "price": 449,
     "oldPrice": 699,
     "discount": 36,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4378,7 +4488,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 112,
@@ -4389,10 +4500,10 @@ export const products = [
     "price": 2799,
     "oldPrice": 3899,
     "discount": 28,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4421,7 +4532,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 113,
@@ -4432,10 +4544,10 @@ export const products = [
     "price": 3899,
     "oldPrice": 5299,
     "discount": 26,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80&sig=113",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4457,7 +4569,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 114,
@@ -4468,10 +4581,10 @@ export const products = [
     "price": 1699,
     "oldPrice": 2399,
     "discount": 29,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80&sig=114",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4500,7 +4613,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 115,
@@ -4511,10 +4625,10 @@ export const products = [
     "price": 449,
     "oldPrice": 699,
     "discount": 36,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80&sig=115",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4536,7 +4650,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 116,
@@ -4547,10 +4662,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=600&q=80&sig=116",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4579,7 +4694,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 117,
@@ -4590,10 +4706,10 @@ export const products = [
     "price": 349,
     "oldPrice": 499,
     "discount": 30,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=600&q=80&sig=117",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4615,7 +4731,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 118,
@@ -4626,10 +4743,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80&sig=118",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4658,7 +4775,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 119,
@@ -4669,10 +4787,10 @@ export const products = [
     "price": 699,
     "oldPrice": 999,
     "discount": 30,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80&sig=119",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4694,7 +4812,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 120,
@@ -4705,10 +4824,10 @@ export const products = [
     "price": 849,
     "oldPrice": 1249,
     "discount": 32,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80&sig=120",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4737,7 +4856,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 121,
@@ -4748,10 +4868,10 @@ export const products = [
     "price": 899,
     "oldPrice": 1399,
     "discount": 36,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80&sig=121",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4773,7 +4893,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 122,
@@ -4784,10 +4905,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80&sig=122",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4816,7 +4937,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 123,
@@ -4827,10 +4949,10 @@ export const products = [
     "price": 549,
     "oldPrice": 799,
     "discount": 31,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80&sig=123",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4852,7 +4974,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 124,
@@ -4863,10 +4986,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80&sig=124",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4895,7 +5018,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 125,
@@ -4906,10 +5030,10 @@ export const products = [
     "price": 2799,
     "oldPrice": 3799,
     "discount": 26,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80&sig=125",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4931,7 +5055,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 126,
@@ -4942,10 +5067,10 @@ export const products = [
     "price": 599,
     "oldPrice": 899,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80&sig=126",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -4974,7 +5099,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 127,
@@ -4985,10 +5111,10 @@ export const products = [
     "price": 399,
     "oldPrice": 599,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=600&q=80&sig=127",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5010,7 +5136,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 128,
@@ -5021,10 +5148,10 @@ export const products = [
     "price": 349,
     "oldPrice": 499,
     "discount": 30,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80&sig=128",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5053,7 +5180,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 129,
@@ -5064,10 +5192,10 @@ export const products = [
     "price": 799,
     "oldPrice": 1199,
     "discount": 33,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1508215885820-4658d27cc471?auto=format&fit=crop&w=600&q=80",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5089,7 +5217,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 130,
@@ -5100,10 +5229,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80&sig=130",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5132,7 +5261,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 131,
@@ -5143,10 +5273,10 @@ export const products = [
     "price": 549,
     "oldPrice": 799,
     "discount": 31,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1560090995-01632a28895b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1560090995-01632a28895b?auto=format&fit=crop&w=600&q=80&sig=131",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5168,7 +5298,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 132,
@@ -5179,10 +5310,10 @@ export const products = [
     "price": 1499,
     "oldPrice": 2099,
     "discount": 29,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=600&q=80&sig=132",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5211,7 +5342,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 133,
@@ -5222,10 +5354,10 @@ export const products = [
     "price": 999,
     "oldPrice": 1499,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80&sig=133",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5247,7 +5379,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 134,
@@ -5258,10 +5391,10 @@ export const products = [
     "price": 249,
     "oldPrice": 399,
     "discount": 38,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=600&q=80&sig=134",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5290,7 +5423,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 135,
@@ -5301,10 +5435,10 @@ export const products = [
     "price": 599,
     "oldPrice": 899,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1508215885820-4658d27cc471?auto=format&fit=crop&w=600&q=80&sig=135",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5326,7 +5460,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 136,
@@ -5337,10 +5472,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1560090995-01632a28895b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80&sig=136",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5369,7 +5504,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 137,
@@ -5380,10 +5516,10 @@ export const products = [
     "price": 999,
     "oldPrice": 1499,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80&sig=137",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5405,7 +5541,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 138,
@@ -5416,10 +5553,10 @@ export const products = [
     "price": 1299,
     "oldPrice": 1799,
     "discount": 28,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80&sig=138",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5448,7 +5585,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 139,
@@ -5459,10 +5597,10 @@ export const products = [
     "price": 449,
     "oldPrice": 649,
     "discount": 31,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80&sig=139",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5484,7 +5622,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 140,
@@ -5495,10 +5634,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80&sig=140",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5527,7 +5666,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 141,
@@ -5538,10 +5678,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1560090995-01632a28895b?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80&sig=141",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5563,7 +5703,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 142,
@@ -5574,10 +5715,10 @@ export const products = [
     "price": 1199,
     "oldPrice": 1699,
     "discount": 29,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80&sig=142",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5606,7 +5747,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 143,
@@ -5617,10 +5759,10 @@ export const products = [
     "price": 749,
     "oldPrice": 1099,
     "discount": 32,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80&sig=143",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5642,7 +5784,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 144,
@@ -5653,10 +5796,10 @@ export const products = [
     "price": 349,
     "oldPrice": 499,
     "discount": 30,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80&sig=144",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5685,7 +5828,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 145,
@@ -5696,10 +5840,10 @@ export const products = [
     "price": 1999,
     "oldPrice": 2799,
     "discount": 29,
-    "rating": 4.5,
-    "ratingCount": 45,
+    "rating": 4.6,
+    "ratingCount": 50,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80&sig=145",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5721,7 +5865,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 146,
@@ -5732,10 +5877,10 @@ export const products = [
     "price": 349,
     "oldPrice": 499,
     "discount": 30,
-    "rating": 4.6,
-    "ratingCount": 62,
+    "rating": 4.7,
+    "ratingCount": 68,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=600&q=80&sig=146",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5764,7 +5909,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 147,
@@ -5775,10 +5921,10 @@ export const products = [
     "price": 1899,
     "oldPrice": 2699,
     "discount": 30,
-    "rating": 4.7,
-    "ratingCount": 79,
+    "rating": 4.8,
+    "ratingCount": 86,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1508215885820-4658d27cc471?auto=format&fit=crop&w=600&q=80&sig=147",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5800,7 +5946,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 148,
@@ -5811,10 +5958,10 @@ export const products = [
     "price": 1199,
     "oldPrice": 1699,
     "discount": 29,
-    "rating": 4.8,
-    "ratingCount": 96,
+    "rating": 4.9,
+    "ratingCount": 104,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1508215885820-4658d27cc471?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80&sig=148",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5843,7 +5990,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 149,
@@ -5854,10 +6002,10 @@ export const products = [
     "price": 299,
     "oldPrice": 449,
     "discount": 33,
-    "rating": 4.9,
-    "ratingCount": 113,
+    "rating": 5,
+    "ratingCount": 122,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80&sig=149",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5879,7 +6027,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 150,
@@ -5890,10 +6039,10 @@ export const products = [
     "price": 1699,
     "oldPrice": 2399,
     "discount": 29,
-    "rating": 4.5,
-    "ratingCount": 130,
+    "rating": 4.6,
+    "ratingCount": 140,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80&sig=150",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5922,7 +6071,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 151,
@@ -5933,10 +6083,10 @@ export const products = [
     "price": 899,
     "oldPrice": 1299,
     "discount": 31,
-    "rating": 4.6,
-    "ratingCount": 147,
+    "rating": 4.7,
+    "ratingCount": 158,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80&sig=151",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -5958,7 +6108,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 152,
@@ -5969,10 +6120,10 @@ export const products = [
     "price": 1299,
     "oldPrice": 1799,
     "discount": 28,
-    "rating": 4.7,
-    "ratingCount": 164,
+    "rating": 4.8,
+    "ratingCount": 176,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80&sig=152",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6001,7 +6152,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 153,
@@ -6012,10 +6164,10 @@ export const products = [
     "price": 449,
     "oldPrice": 699,
     "discount": 36,
-    "rating": 4.8,
-    "ratingCount": 181,
+    "rating": 4.9,
+    "ratingCount": 194,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1508215885820-4658d27cc471?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=600&q=80&sig=153",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6037,7 +6189,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 154,
@@ -6048,10 +6201,10 @@ export const products = [
     "price": 1299,
     "oldPrice": 1899,
     "discount": 32,
-    "rating": 4.9,
-    "ratingCount": 198,
+    "rating": 5,
+    "ratingCount": 212,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80&sig=154",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6080,7 +6233,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 155,
@@ -6091,10 +6245,10 @@ export const products = [
     "price": 1599,
     "oldPrice": 2199,
     "discount": 27,
-    "rating": 4.5,
-    "ratingCount": 215,
+    "rating": 4.6,
+    "ratingCount": 230,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=600&q=80&sig=155",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6116,7 +6270,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 156,
@@ -6127,10 +6282,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.6,
-    "ratingCount": 232,
+    "rating": 4.7,
+    "ratingCount": 248,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80&sig=156",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6159,7 +6314,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 157,
@@ -6170,10 +6326,10 @@ export const products = [
     "price": 3299,
     "oldPrice": 4499,
     "discount": 27,
-    "rating": 4.7,
-    "ratingCount": 249,
+    "rating": 4.8,
+    "ratingCount": 266,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80&sig=157",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6195,7 +6351,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Lightweight yet strong. Highly recommended for daily practice."
       }
-    ]
+    ],
+    "isBestSeller": true
   },
   {
     "id": 158,
@@ -6206,10 +6363,10 @@ export const products = [
     "price": 399,
     "oldPrice": 599,
     "discount": 33,
-    "rating": 4.8,
-    "ratingCount": 266,
+    "rating": 4.9,
+    "ratingCount": 284,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1508215885820-4658d27cc471?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=600&q=80&sig=158",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6238,7 +6395,8 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Super fast dispatch! Packaged safely and works right out of the box."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 159,
@@ -6249,10 +6407,10 @@ export const products = [
     "price": 649,
     "oldPrice": 899,
     "discount": 28,
-    "rating": 4.9,
-    "ratingCount": 283,
+    "rating": 5,
+    "ratingCount": 302,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80&sig=159",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6274,7 +6432,8 @@ export const products = [
         "date": "17 Aug 2026",
         "comment": "Exceeded my expectations! Sizing is accurate and the material feels premium."
       }
-    ]
+    ],
+    "isBestSeller": false
   },
   {
     "id": 160,
@@ -6285,10 +6444,10 @@ export const products = [
     "price": 499,
     "oldPrice": 749,
     "discount": 33,
-    "rating": 4.5,
-    "ratingCount": 300,
+    "rating": 4.6,
+    "ratingCount": 320,
     "inStock": true,
-    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=600&q=80&sig=160",
     "features": [
       "Direct factory manufacturer certified authentic",
       "Engineered for durability and competitive performance",
@@ -6317,6 +6476,7 @@ export const products = [
         "date": "24 Aug 2026",
         "comment": "Solid grip, excellent finish, and very sturdy. 5 stars all the way."
       }
-    ]
+    ],
+    "isBestSeller": false
   }
 ];

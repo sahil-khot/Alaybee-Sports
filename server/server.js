@@ -4,10 +4,11 @@ const dotenv = require("dotenv");
 const path = require("path");
 
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, ".env") });
 
 const { connectDB } = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -33,6 +34,7 @@ app.get("/api/health", (req, res) => {
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
 
 // 404 Route Handler
 app.use((req, res, next) => {
