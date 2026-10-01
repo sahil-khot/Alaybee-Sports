@@ -1,6 +1,7 @@
 // API client utility for Alaybee Sports Backend
 
-const API_BASE = "/api";
+const rawApiUrl = import.meta.env.VITE_API_URL || "/api";
+const API_BASE = rawApiUrl.endsWith("/") ? rawApiUrl.slice(0, -1) : rawApiUrl;
 
 export const getAuthToken = () => {
   return localStorage.getItem("alaybee_token");

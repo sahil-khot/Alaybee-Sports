@@ -48,6 +48,10 @@ const seedDummyAccounts = async () => {
 };
 
 const connectDB = async () => {
+  if (mongoose.connection.readyState >= 1) {
+    isConnected = true;
+    return true;
+  }
   const rawUri = process.env.MONGO_URI;
   const uri = normalizeMongoUri(rawUri);
 

@@ -1,114 +1,189 @@
-# 🏆 Alaybee Sports — Full-Stack E-Commerce & Club Services Platform
+# 🏆 Alaybee Sports — Full-Stack E-Commerce Platform
 
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-A modern, responsive full-stack sports equipment e-commerce platform built with **React (Vite)**, **Bootstrap 5**, **React Icons**, **Node.js/Express**, and **MongoDB Atlas** with JWT authentication and role-based privileges.
-
----
-
-## ✨ Features
-
-- **🎯 10 Sports Categories with 160 Curated Items (16 per category)**:
-  - Cricket, Football, Basketball, Tennis, Badminton, Cycling, Fitness, Running, Swimming, and Boxing.
-  - Complete with 160 unique high-resolution images (zero repeating images), INR pricing, original prices, discount tags, ratings, and specifications.
-- **🔥 Dedicated Best Sellers Section**:
-  - Direct header access to top-performing gear rated 4.8+ with quick category filtering and live search.
-- **🔍 Seamless Category Navigation**:
-  - Direct 1-click filtering from Home "Shop By Categories" into specific sport catalogs.
-  - Category page displays 3 featured items per sport with direct click-through redirection.
-- **⭐ Interactive Product Details & Customer Reviews**:
-  - Click any product card to launch a full-detail modal.
-  - View 2 to 3 verified customer reviews per item, star breakdown, key highlights, and submit live reviews.
-- **🛒 Dynamic Shopping Cart & Wishlist**:
-  - Real-time quantity adjustments, price calculations, shipping, and persistent wishlist saving.
-- **🔐 JWT Authentication & Demo Accounts**:
-  - 1-click instant login buttons for pre-seeded test accounts.
-  - Role-based authorization for **Club Members** and **Pro Athletes**.
-- **📱 Clean, Consistent & Modern UI**:
-  - Tailored color palette, Inter typography, rich React Icons, and responsive design.
+A modern, production-grade full-stack athletic gear and sports equipment e-commerce web application. Built with **React 18 (Vite)**, **Bootstrap 5**, **Node.js/Express**, and **MongoDB Atlas** with JWT authentication, role-based member privileges, simulated payment gateway processing, and real-time order tracking.
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ System Architecture
 
-### Frontend (Client)
-- **Framework**: React 18 (Vite)
-- **Routing**: React Router DOM v6
-- **UI & Icons**: Bootstrap 5, React Icons (`react-icons`)
-- **Styling**: Vanilla CSS Design System with Inter typography
-
-### Backend (Server)
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB Atlas with Mongoose ODM
-- **Security & Auth**: JSON Web Tokens (JWT), bcryptjs password hashing, CORS, Dotenv
+```text
+┌─────────────────────────────────────────────────────────────────────────┐
+│                           Client (React 18 + Vite)                      │
+│   • React Router v6 (SPA)     • Context API (Auth, Cart, Wishlist)      │
+│   • Bootstrap 5 + Vanilla CSS • Dynamic Product Modals & Reviews        │
+└────────────────────────────────────┬────────────────────────────────────┘
+                                     │
+                             REST API (JSON / JWT)
+                                     │
+┌────────────────────────────────────▼────────────────────────────────────┐
+│                        Backend (Node.js + Express)                      │
+│   • Express Router            • JWT Bearer Auth & bcryptjs Hashing       │
+│   • Role-based Access Guard   • Input Validation & Unified Error Handler │
+└────────────────────────────────────┬────────────────────────────────────┘
+                                     │
+                             Mongoose 8 ODM
+                                     │
+┌────────────────────────────────────▼────────────────────────────────────┐
+│                          Database (MongoDB Atlas)                       │
+│   • Users Collection (Roles, Profiles, Avatars, Passwords)              │
+│   • Auto-seeding for pre-configured athlete & member test accounts      │
+└─────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 📁 Project Architecture
+## 📁 Repository Directory Structure
 
 ```text
 Alaybee-Sports/
-├── public/                 # Static assets (logo, favicon)
-├── src/                    # Frontend React Application
-│   ├── assets/             # Media and styling assets
-│   ├── components/         # Reusable UI components
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── ProductCard.jsx
-│   │   ├── ProductDetailModal.jsx
-│   │   └── ProtectedRoute.jsx
-│   ├── context/            # AuthContext for user state
-│   ├── data/               # 160-product sports catalog (10 categories x 16 items)
-│   │   └── products.js
-│   ├── pages/              # Route pages (Home, Shop, Categories, Cart, Wishlist, etc.)
-│   ├── App.jsx             # Main routing and global state
-│   ├── index.css           # Global typography and design system
-│   └── main.jsx
-├── server/                 # Node.js + Express Backend
-│   ├── config/             # MongoDB connection & auto-seeder
-│   ├── controllers/        # Auth & user controllers
-│   ├── data/               # Pre-seeded dummy accounts
-│   ├── middleware/         # JWT auth middleware
-│   ├── models/             # Mongoose schemas (User, Order)
-│   ├── routes/             # Express API routes
-│   ├── .env.example        # Server environment template
-│   └── server.js           # Server entry point
-├── .env.example            # Client environment template
-├── .gitignore              # Git ignore rules for node_modules and .env
-├── package.json            # Client dependencies & scripts
-├── vite.config.js          # Vite configuration with API proxy
-└── README.md
+├── public/                     # Static assets & public icons
+├── src/                        # Frontend React Application
+│   ├── assets/                 # Brand assets & images
+│   ├── components/             # Reusable UI components
+│   │   ├── Footer.jsx          # Site-wide navigation footer
+│   │   ├── Hero.jsx            # Dynamic homepage hero banner
+│   │   ├── Navbar.jsx          # Navigation header with cart/wishlist counters
+│   │   ├── ProductCard.jsx     # Catalog card with badge, rating & quick-actions
+│   │   ├── ProductDetailModal.jsx # Full product modal with customer reviews
+│   │   └── ProtectedRoute.jsx  # Route guard for authenticated paths
+│   ├── context/                # Global React Context providers
+│   │   └── AuthContext.jsx     # Authentication, sessions & avatar state
+│   ├── data/                   # Catalog dataset
+│   │   └── products.js         # 160 curated products across 10 sports
+│   ├── pages/                  # Page-level route views
+│   │   ├── About.jsx           # Company mission, stats & sports facilities
+│   │   ├── BestSellers.jsx     # Top-rated gear (4.8+) with instant filter
+│   │   ├── Cart.jsx            # Interactive cart with quantity steppers
+│   │   ├── Categories.jsx      # Sport categories directory with featured items
+│   │   ├── Checkout.jsx        # Multi-stage gateway loader & payment receipt
+│   │   ├── Contact.jsx         # Support hub with balanced inquiry form
+│   │   ├── Deals.jsx           # Promotional discount listings
+│   │   ├── Home.jsx            # Landing page with hero, trends & categories
+│   │   ├── Login.jsx           # Login with 1-click test credentials
+│   │   ├── Orders.jsx          # Order history with 4-stage shipment tracker
+│   │   ├── Profile.jsx         # User profile, role badges & avatar manager
+│   │   ├── ProLounge.jsx       # Exclusive VIP zone for Pro Athletes
+│   │   ├── Register.jsx        # Account registration with role selection
+│   │   ├── Shop.jsx            # Full catalog with search, sort & filters
+│   │   ├── TrackOrder.jsx      # Live parcel & tracking lookup tool
+│   │   └── Wishlist.jsx        # Saved equipment & fast move-to-cart
+│   ├── services/               # Client API integrations
+│   │   └── api.js              # Centralized fetch client with bearer auth
+│   ├── App.jsx                 # Route definitions and layout shell
+│   ├── index.css               # Global typography, color tokens & animations
+│   └── main.jsx                # React DOM root entry point
+├── server/                     # Node.js + Express Backend
+│   ├── config/
+│   │   └── db.js               # MongoDB Atlas connection & auto-seeder
+│   ├── controllers/
+│   │   └── authController.js   # Auth controllers (register, login, me, profile)
+│   ├── data/
+│   │   ├── dummyAccounts.js    # Pre-configured test accounts
+│   │   └── seedProducts.js     # Standalone product database seeder
+│   ├── middleware/
+│   │   └── authMiddleware.js   # JWT token verification & role authorization
+│   ├── models/
+│   │   ├── Order.js            # Mongoose Order schema
+│   │   └── User.js             # Mongoose User schema with bcrypt hooks
+│   ├── routes/
+│   │   ├── authRoutes.js       # Auth endpoints (/api/auth/*)
+│   │   └── productRoutes.js    # Product catalog endpoints (/api/products/*)
+│   ├── .env                    # Server environment variables (git-ignored)
+│   ├── .env.example            # Server environment template
+│   ├── package.json            # Server dependencies & scripts
+│   └── server.js               # Express application entry point
+├── .env                        # Client environment variables (git-ignored)
+├── .env.example                # Client environment template
+├── .gitignore                  # Git ignore rules for node_modules and .env
+├── package.json                # Root client dependencies & scripts
+├── vercel.json                 # Vercel deployment configuration & SPA rewrites
+├── vite.config.js              # Vite build setup with proxy for local dev
+└── README.md                   # Project documentation
 ```
 
 ---
 
-## ⚙️ Environment Variables Setup
+## ✨ Features & Capabilities
+
+- **10 Sports Disciplines & 160 Curated Products**:
+  - Cricket, Football, Basketball, Tennis, Badminton, Cycling, Fitness, Running, Swimming, and Boxing.
+  - 16 distinct products per category with 160 unique high-resolution images, real Indian Rupee (₹) pricing, discount badges, specifications, and verified customer reviews.
+- **Natural Payment Experience**:
+  - Realistic multi-stage payment gateway authorization simulation (`Connecting Gateway` &rarr; `Authorizing ₹ Amount` &rarr; `Generating Invoice`).
+  - Polished post-payment receipt displaying transaction reference IDs, itemized totals, delivery address verification, and one-click shipment tracking.
+- **Shipment Tracking & Order History**:
+  - Visual 4-stage tracking timeline (`Order Placed` &rarr; `Confirmed` &rarr; `Packed` &rarr; `Delivered`) on every purchase.
+- **Role-Based Privileges & Pro Lounge**:
+  - **Club Member**: Standard athletic member pricing and regular order history.
+  - **Pro Athlete**: VIP access to the Pro Athlete Lounge, automated 25% discount perks, priority courier dispatch, and special role badges.
+- **Profile & Custom Avatar Management**:
+  - Upload custom profile pictures, edit personal details, phone numbers, and city preferences with persistent cloud/local sync.
+- **Tactile Cart & Shopping Experience**:
+  - Circular quantity steppers, soft-danger item removal buttons, animated checkout call-to-actions, and live subtotal calculations.
+- **Balanced Customer Support Hub**:
+  - Direct customer care hotline, verified support email, corporate headquarters details, operating hours, and inquiry form with live submission feedback.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React 18, Vite 5, React Router DOM 6, Bootstrap 5.3, React Icons (`react-icons`) |
+| **State & Logic** | React Context API, LocalStorage persistence, custom hooks |
+| **Styling** | Custom Design System (`index.css`), CSS keyframe animations, responsive flex/grid |
+| **Backend** | Node.js, Express.js (v4), CORS |
+| **Database** | MongoDB Atlas (Cloud Cluster), Mongoose (v8 ODM) |
+| **Authentication** | JSON Web Tokens (`jsonwebtoken`), `bcryptjs` password hashing |
+| **Deployment** | Vercel (Frontend & SPA configuration via `vercel.json`), Render / Railway (Backend) |
+
+---
+
+## ⚙️ Environment Variables
 
 ### 1. Client Environment (`.env`)
-Create a `.env` file in the root directory (or copy from `.env.example`):
+Create a `.env` file in the project root:
 ```env
+# Local Development (proxied to local Express server)
 VITE_API_URL=http://localhost:5000/api
+
+# Production (when deployed to Vercel, set to your live backend URL)
+# VITE_API_URL=https://your-alaybee-backend.onrender.com/api
 ```
 
 ### 2. Server Environment (`server/.env`)
-Create a `server/.env` file inside the `server/` directory (or copy from `server/.env.example`):
+Create a `.env` file in the `server/` directory:
 ```env
+# Server Port
 PORT=5000
-MONGO_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_jwt_secret_key_here
+
+# MongoDB Atlas Connection URI
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.alaybee.mongodb.net/alaybee_sports?retryWrites=true&w=majority
+
+# JWT Authentication Secret & Token Expiration
+JWT_SECRET=alaybee_sports_super_secret_jwt_key_2026_sports
 JWT_EXPIRES_IN=7d
+
+# Environment Mode
+NODE_ENV=development
 ```
 
-> **Note**: Both `.env` files are configured in `.gitignore` to prevent leaking private credentials and database secrets.
+> **Security Note**: Both `.env` files are ignored in `.gitignore` to protect production database credentials and JWT secrets.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Local Installation & Setup
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm (v9 or higher)
+- Free MongoDB Atlas cluster or local MongoDB instance
 
 ### 1. Clone the Repository
 ```bash
@@ -117,59 +192,109 @@ cd Alaybee-Sports
 ```
 
 ### 2. Install Dependencies
-
-#### Client Dependencies (Root):
 ```bash
+# Install client dependencies (root)
 npm install
-```
 
-#### Server Dependencies:
-```bash
+# Install server dependencies
 cd server
 npm install
 cd ..
 ```
 
-### 3. Run the Development Servers
+### 3. Configure Environments
+Copy the templates to `.env`:
+```bash
+# In project root:
+cp .env.example .env
 
+# In server directory:
+cp server/.env.example server/.env
+```
+*Update `server/.env` with your actual MongoDB Atlas connection URI.*
+
+### 4. Run the Application
 Open two terminal windows:
 
-#### Terminal 1 — Start Backend Server:
+**Terminal 1 (Backend Server):**
 ```bash
 npm run server
+# Runs on http://localhost:5000
+# Automatically connects to MongoDB Atlas and verifies test accounts
 ```
-*Backend runs on `http://localhost:5000`*
 
-#### Terminal 2 — Start Frontend Application:
+**Terminal 2 (Frontend Client):**
 ```bash
 npm run dev
+# Runs on http://localhost:5173
 ```
-*Frontend runs on `http://localhost:5173`*
 
 ---
 
-## ⚡ 1-Click Test Accounts
+## ⚡ Pre-configured Test Accounts
 
-On the `/login` page, you can click either quick-login button to test:
+You can log in manually or click the **1-Click Test Login** buttons on the `/login` page:
 
-| Role | Name | Email | Password | Access Privileges |
+| Role | Name | Email | Password | Access & Perks |
 | :--- | :--- | :--- | :--- | :--- |
-| **Club Member** | Rahul Sharma | `member@alaybee.com` | `password123` | Member pricing, checkout, order history |
-| **Pro Athlete** | Arjun Verma | `athlete@alaybee.com` | `password123` | Exclusive Pro Lounge, 25% discount, priority dispatch |
+| **Club Member** | Rahul Sharma | `member@alaybee.com` | `password123` | Member pricing, checkout access, personal order history |
+| **Pro Athlete** | Arjun Verma | `athlete@alaybee.com` | `password123` | Pro Lounge access, 25% automatic discount, priority dispatch badge |
 
 ---
 
-## 📜 Available Scripts
+## 📡 REST API Reference
 
-- `npm run dev`: Starts the Vite development server on port 5173.
-- `npm run server`: Starts the Express backend on port 5000.
-- `npm run seed:products`: Seeds all 160 curated products into MongoDB Atlas.
-- `npm run build`: Builds the production bundle with Vite.
-- `npm run preview`: Locally previews the production build.
+| Method | Endpoint | Description | Protected |
+| :--- | :--- | :--- | :---: |
+| `GET` | `/api/health` | Server health check and timestamp | No |
+| `POST` | `/api/auth/register` | Register new user account | No |
+| `POST` | `/api/auth/login` | Authenticate user and return JWT token | No |
+| `GET` | `/api/auth/me` | Fetch authenticated user profile | Yes (JWT) |
+| `PUT` | `/api/auth/profile` | Update profile data and custom avatar | Yes (JWT) |
+| `GET` | `/api/auth/demo-accounts` | List pre-configured demo account credentials | No |
+| `GET` | `/api/auth/athlete-perks` | Retrieve Pro Athlete member exclusive benefits | Yes (Pro Role) |
+| `GET` | `/api/products` | Fetch sports catalog items | No |
 
 ---
 
-## 👨‍💻 Author
+## 🚢 Complete Vercel Deployment Guide
 
-- **Sahil Khot** — [GitHub Profile](https://github.com/sahil-khot)
-- Repository: [Alaybee-Sports](https://github.com/sahil-khot/Alaybee-Sports)
+Follow these steps to deploy Alaybee Sports to production with 100% uptime and zero client routing errors:
+
+### Step 1: Deploy Backend (Render or Railway)
+Because the backend uses Express and a persistent MongoDB connection, deploying it to a free host like **Render** or **Railway** is recommended:
+1. Go to [Render.com](https://render.com/) and click **New + > Web Service**.
+2. Connect your GitHub repository `https://github.com/sahil-khot/Alaybee-Sports`.
+3. Set the service settings:
+   - **Root Directory**: `server`
+   - **Build Command**: `npm install`
+   - **Start Command**: `node server.js`
+4. In **Environment Variables**, add:
+   - `MONGO_URI`: Your MongoDB Atlas connection string.
+   - `JWT_SECRET`: A secure random secret string.
+   - `JWT_EXPIRES_IN`: `7d`
+   - `NODE_ENV`: `production`
+5. Click **Create Web Service**. Once deployed, copy your backend URL (e.g. `https://alaybee-backend.onrender.com`).
+6. In **MongoDB Atlas**, go to **Network Access** and ensure `0.0.0.0/0` (Allow Access from Anywhere) is whitelisted so Render can connect.
+
+### Step 2: Deploy Frontend on Vercel
+1. Go to [Vercel.com](https://vercel.com/) and sign in with GitHub.
+2. Click **Add New... > Project**.
+3. Import your repository: `sahil-khot/Alaybee-Sports`.
+4. Configure the project:
+   - **Framework Preset**: `Vite` (automatically detected).
+   - **Root Directory**: `./` (leave default).
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+5. In **Environment Variables**, add:
+   - **Key**: `VITE_API_URL`
+   - **Value**: `https://your-backend.onrender.com/api` (the URL from Step 1 with `/api`).
+6. Click **Deploy**.
+7. The included `vercel.json` automatically configures SPA URL rewrites, ensuring all React Router paths (e.g., `/orders`, `/cart`, `/checkout`, `/categories`) resolve cleanly without 404 errors on refresh.
+
+---
+
+## 👨‍💻 Author & Repository
+
+- **Author**: Sahil Khot
+- **Repository**: [https://github.com/sahil-khot/Alaybee-Sports](https://github.com/sahil-khot/Alaybee-Sports)
