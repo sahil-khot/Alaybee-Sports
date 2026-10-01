@@ -23,18 +23,32 @@ app.use(
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
-// Health Check
-app.get("/api/health", (req, res) => {
+// Ensure DB connection is established for serverless and standalone requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+  } catch (err) {
+    console.error("MongoDB Atlas connection error:", err.message);
+  }
+  next();
+});
+
+// Health Check Handler
+const healthCheckHandler = (req, res) => {
   res.json({
     status: "ok",
     message: "Alaybee Sports Backend API is running smoothly",
     timestamp: new Date().toISOString(),
   });
-});
+};
+app.get("/api/health", healthCheckHandler);
+app.get("/health", healthCheckHandler);
 
-// Routes
+// Routes (support both /api/ prefix and direct paths for Vercel serverless rewrites)
 app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
 app.use("/api/products", productRoutes);
+app.use("/products", productRoutes);
 
 // 404 Route Handler
 app.use((req, res, next) => {
@@ -49,8 +63,12 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start Server & Connect MongoDB Atlas
-app.listen(PORT, async () => {
-  console.log(`🚀 Alaybee Sports Backend running on http://localhost:${PORT}`);
-  await connectDB();
-});
+// Start Server locally when executed directly (not when imported as a serverless function)
+if (require.main === module && !process.env.VERCEL) {
+  app.listen(PORT, async () => {
+    console.log(`🚀 Alaybee Sports Backend running on http://localhost:${PORT}`);
+    await connectDB();
+  });
+}
+
+module.exports = app;

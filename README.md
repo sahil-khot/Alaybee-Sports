@@ -257,40 +257,42 @@ You can log in manually or click the **1-Click Test Login** buttons on the `/log
 
 ---
 
-## 🚢 Complete Vercel Deployment Guide
+## 🚢 Complete All-in-One Vercel Deployment Guide
 
-Follow these steps to deploy Alaybee Sports to production with 100% uptime and zero client routing errors:
+Alaybee Sports is pre-configured for a **complete, unified deployment on Vercel** — hosting both the **React 18 frontend** and the **Express/MongoDB serverless API** in a single Vercel project with zero extra hosting needed.
 
-### Step 1: Deploy Backend (Render or Railway)
-Because the backend uses Express and a persistent MongoDB connection, deploying it to a free host like **Render** or **Railway** is recommended:
-1. Go to [Render.com](https://render.com/) and click **New + > Web Service**.
-2. Connect your GitHub repository `https://github.com/sahil-khot/Alaybee-Sports`.
-3. Set the service settings:
-   - **Root Directory**: `server`
-   - **Build Command**: `npm install`
-   - **Start Command**: `node server.js`
-4. In **Environment Variables**, add:
-   - `MONGO_URI`: Your MongoDB Atlas connection string.
-   - `JWT_SECRET`: A secure random secret string.
-   - `JWT_EXPIRES_IN`: `7d`
-   - `NODE_ENV`: `production`
-5. Click **Create Web Service**. Once deployed, copy your backend URL (e.g. `https://alaybee-backend.onrender.com`).
-6. In **MongoDB Atlas**, go to **Network Access** and ensure `0.0.0.0/0` (Allow Access from Anywhere) is whitelisted so Render can connect.
+### Step 1: Whitelist MongoDB Atlas for Cloud Access
+1. Open your [MongoDB Atlas Dashboard](https://cloud.mongodb.com/).
+2. Navigate to **Security** &rarr; **Network Access**.
+3. Ensure `0.0.0.0/0` (**Allow Access from Anywhere**) is enabled so Vercel's serverless functions can connect to your database cluster.
 
-### Step 2: Deploy Frontend on Vercel
-1. Go to [Vercel.com](https://vercel.com/) and sign in with GitHub.
-2. Click **Add New... > Project**.
-3. Import your repository: `sahil-khot/Alaybee-Sports`.
-4. Configure the project:
-   - **Framework Preset**: `Vite` (automatically detected).
-   - **Root Directory**: `./` (leave default).
+### Step 2: Import Project on Vercel
+1. Go to [Vercel.com](https://vercel.com/) and log in with your GitHub account.
+2. Click **Add New... &rarr; Project**.
+3. Select and import **`sahil-khot/Alaybee-Sports`**.
+
+### Step 3: Configure Build & Environment Settings
+1. Vercel automatically detects the project architecture:
+   - **Framework Preset**: `Vite`
+   - **Root Directory**: `./`
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
-5. In **Environment Variables**, add:
-   - **Key**: `VITE_API_URL`
-   - **Value**: `https://your-backend.onrender.com/api` (the URL from Step 1 with `/api`).
-6. Click **Deploy**.
-7. The included `vercel.json` automatically configures SPA URL rewrites, ensuring all React Router paths (e.g., `/orders`, `/cart`, `/checkout`, `/categories`) resolve cleanly without 404 errors on refresh.
+2. Expand **Environment Variables** and add the following 4 variables:
+   - `MONGO_URI`: `mongodb+srv://sahilkhot1152005_db_user:QlFDeJ0iNRNYtr67@alaybeesports.huzlkea.mongodb.net/alaybee_sports?retryWrites=true&w=majority&appName=AlaybeeSports`
+   - `JWT_SECRET`: `alaybee_sports_super_secret_jwt_key_2026_sports`
+   - `JWT_EXPIRES_IN`: `7d`
+   - `NODE_ENV`: `production`
+
+> **Note on `VITE_API_URL`**: Because the frontend and backend are deployed together on the exact same domain, requests to `/api` work natively without setting `VITE_API_URL`.
+
+### Step 4: Deploy & Verify
+1. Click **Deploy**.
+2. Within ~45 seconds, Vercel will build the frontend assets, bundle the serverless functions in `api/index.js`, and publish your application.
+3. Test your live deployment:
+   - **API Health Check**: `https://<your-project>.vercel.app/api/health`
+   - **Frontend App**: `https://<your-project>.vercel.app/`
+   - **Client Routing**: Refresh `/orders`, `/cart`, or `/categories` to verify clean SPA routing handled by `vercel.json`.
+   - **Authentication**: Test 1-click login on `/login` to verify live MongoDB Atlas connectivity.
 
 ---
 
