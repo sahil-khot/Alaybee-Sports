@@ -90,66 +90,121 @@ function Orders({ orders = [] }) {
 
                   {/* Order Body */}
                   <div className="p-4">
-                    <div className="row g-4">
-                      {/* Products column */}
-                      <div className="col-lg-8">
-                        <h6 className="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
-                          <FaReceipt className="text-primary" />
-                          Purchased Items ({order.items?.length || 0})
-                        </h6>
+                    <div className="row g-4 align-items-stretch">
+                      {/* Products & Tracking Progress column */}
+                      <div className="col-lg-7 d-flex flex-column justify-content-between">
+                        <div>
+                          <div className="d-flex justify-content-between align-items-center mb-3">
+                            <h6 className="fw-bold text-dark mb-0 d-flex align-items-center gap-2">
+                              <FaReceipt className="text-primary" />
+                              Purchased Items ({order.items?.length || 0})
+                            </h6>
+                            <span className="badge bg-light text-muted border small">
+                              Direct Manufacturer Dispatch
+                            </span>
+                          </div>
 
-                        <div className="d-flex flex-column gap-3">
-                          {order.items?.map((item, idx) => (
-                            <div
-                              key={idx}
-                              className="d-flex align-items-center justify-content-between p-2 rounded-3 border bg-white"
-                            >
-                              <div className="d-flex align-items-center gap-3">
-                                <img
-                                  src={item.image}
-                                  alt={item.name}
-                                  style={{
-                                    width: "60px",
-                                    height: "60px",
-                                    objectFit: "cover",
-                                    borderRadius: "8px",
-                                  }}
-                                  onError={(e) => {
-                                    e.target.src =
-                                      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=300&q=80";
-                                  }}
-                                />
-                                <div>
-                                  <h6 className="mb-0 fw-semibold text-dark" style={{ fontSize: "14px" }}>
-                                    {item.name}
-                                  </h6>
-                                  <span className="small text-muted">
-                                    Qty: <strong className="text-dark">{item.quantity}</strong> × ₹{item.price?.toLocaleString("en-IN")}
-                                  </span>
-                                  {item.category && (
-                                    <span className="badge bg-light text-muted border ms-2 small">
-                                      {item.category}
-                                    </span>
-                                  )}
+                          <div className="d-flex flex-column gap-2 mb-4">
+                            {order.items?.map((item, idx) => (
+                              <div
+                                key={idx}
+                                className="d-flex align-items-center justify-content-between p-3 rounded-3 border bg-light bg-opacity-50"
+                              >
+                                <div className="d-flex align-items-center gap-3">
+                                  <img
+                                    src={item.image}
+                                    alt={item.name}
+                                    style={{
+                                      width: "64px",
+                                      height: "64px",
+                                      objectFit: "cover",
+                                      borderRadius: "8px",
+                                    }}
+                                    onError={(e) => {
+                                      e.target.src =
+                                        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=300&q=80";
+                                    }}
+                                  />
+                                  <div>
+                                    <h6 className="mb-1 fw-semibold text-dark" style={{ fontSize: "14px" }}>
+                                      {item.name}
+                                    </h6>
+                                    <div className="d-flex align-items-center gap-2 flex-wrap">
+                                      <span className="small text-muted">
+                                        Qty: <strong className="text-dark">{item.quantity}</strong> × ₹{item.price?.toLocaleString("en-IN")}
+                                      </span>
+                                      {item.category && (
+                                        <span className="badge bg-white text-secondary border px-2 py-0.5" style={{ fontSize: "11px" }}>
+                                          {item.category}
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
                                 </div>
+                                <span className="fw-bold text-dark fs-6 pe-2">
+                                  ₹{((item.price || 0) * (item.quantity || 1)).toLocaleString("en-IN")}
+                                </span>
                               </div>
-                              <span className="fw-bold text-dark fs-6 pe-2">
-                                ₹{((item.price || 0) * (item.quantity || 1)).toLocaleString("en-IN")}
-                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Order Fulfillment & Progress Bar to eliminate blank space on left */}
+                        <div className="p-3 bg-white border rounded-3 mt-auto shadow-xs">
+                          <div className="d-flex justify-content-between align-items-center mb-2">
+                            <span className="small fw-bold text-dark d-flex align-items-center gap-1.5">
+                              <FaTruck className="text-primary" size={13} /> Shipment Progress
+                            </span>
+                            <span className="badge bg-success-subtle text-success small px-2 py-0.5">
+                              Estimated Delivery: 3-5 Days
+                            </span>
+                          </div>
+
+                          {/* Progress steps */}
+                          <div className="order-steps-container py-2">
+                            <div className="d-flex justify-content-between position-relative">
+                              <div className="text-center" style={{ width: "25%", zIndex: 2 }}>
+                                <div className="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center shadow-xs" style={{ width: "26px", height: "26px", fontSize: "12px" }}>
+                                  ✓
+                                </div>
+                                <span className="d-block small text-dark fw-semibold mt-1" style={{ fontSize: "11px" }}>Placed</span>
+                              </div>
+                              <div className="text-center" style={{ width: "25%", zIndex: 2 }}>
+                                <div className="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center shadow-xs" style={{ width: "26px", height: "26px", fontSize: "12px" }}>
+                                  ✓
+                                </div>
+                                <span className="d-block small text-dark fw-semibold mt-1" style={{ fontSize: "11px" }}>Confirmed</span>
+                              </div>
+                              <div className="text-center" style={{ width: "25%", zIndex: 2 }}>
+                                <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center shadow-xs" style={{ width: "26px", height: "26px", fontSize: "12px" }}>
+                                  ●
+                                </div>
+                                <span className="d-block small text-primary fw-semibold mt-1" style={{ fontSize: "11px" }}>Packed</span>
+                              </div>
+                              <div className="text-center" style={{ width: "25%", zIndex: 2 }}>
+                                <div className="rounded-circle bg-light border text-muted d-inline-flex align-items-center justify-content-center" style={{ width: "26px", height: "26px", fontSize: "12px" }}>
+                                  ○
+                                </div>
+                                <span className="d-block small text-muted mt-1" style={{ fontSize: "11px" }}>Delivered</span>
+                              </div>
                             </div>
-                          ))}
+                          </div>
                         </div>
                       </div>
 
                       {/* Delivery & summary column */}
-                      <div className="col-lg-4">
-                        <div className="p-3 bg-light rounded-3 h-100 d-flex flex-column justify-content-between">
+                      <div className="col-lg-5 d-flex">
+                        <div className="p-3 bg-light rounded-3 w-100 d-flex flex-column justify-content-between border">
                           <div>
-                            <h6 className="fw-bold text-dark mb-2 d-flex align-items-center gap-1">
-                              <FaMapMarkerAlt className="text-danger" size={13} />
-                              Delivery Address
-                            </h6>
-                            <p className="small mb-1 text-dark fw-semibold">
+                            <div className="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                              <h6 className="fw-bold text-dark mb-0 d-flex align-items-center gap-1.5">
+                                <FaMapMarkerAlt className="text-danger" size={13} />
+                                Delivery Address
+                              </h6>
+                              <span className="badge bg-white text-muted border small">Verified</span>
+                            </div>
+
+                            <p className="small mb-1 text-dark fw-bold">
                               {order.customer?.name}
                             </p>
                             <p className="small text-muted mb-1">
@@ -159,34 +214,37 @@ function Orders({ orders = [] }) {
                               {order.customer?.city} - {order.customer?.pinCode}
                             </p>
                             {order.customer?.phone && (
-                              <p className="small text-muted mb-2">
-                                Phone: {order.customer?.phone}
+                              <p className="small text-muted mb-3">
+                                📞 <strong>Phone:</strong> {order.customer?.phone}
                               </p>
                             )}
 
-                            <hr className="my-2" />
-                            <div className="d-flex justify-content-between small text-muted mb-1">
-                              <span>Payment Method:</span>
-                              <strong className="text-dark">{order.paymentMethod || "UPI"}</strong>
-                            </div>
-                            <div className="d-flex justify-content-between small text-muted mb-1">
-                              <span>Shipping:</span>
-                              <strong className="text-dark">
-                                {order.shipping ? `₹${order.shipping}` : "FREE"}
-                              </strong>
-                            </div>
-                            <div className="d-flex justify-content-between small fw-bold text-dark mt-2 pt-2 border-top">
-                              <span>Grand Total:</span>
-                              <span className="text-primary fs-6">
-                                ₹{order.total?.toLocaleString("en-IN")}
-                              </span>
+                            <div className="bg-white p-2.5 rounded-3 border mb-3">
+                              <div className="d-flex justify-content-between small text-muted mb-1">
+                                <span>Payment Method:</span>
+                                <span className="badge bg-success-subtle text-success border border-success-subtle">
+                                  {order.paymentMethod || "UPI"} (Paid)
+                                </span>
+                              </div>
+                              <div className="d-flex justify-content-between small text-muted mb-1">
+                                <span>Shipping:</span>
+                                <strong className="text-dark">
+                                  {order.shipping ? `₹${order.shipping}` : "FREE"}
+                                </strong>
+                              </div>
+                              <div className="d-flex justify-content-between small fw-bold text-dark pt-1 border-top mt-1">
+                                <span>Grand Total:</span>
+                                <span className="text-primary fs-6">
+                                  ₹{order.total?.toLocaleString("en-IN")}
+                                </span>
+                              </div>
                             </div>
                           </div>
 
-                          <div className="mt-3 pt-2">
+                          <div className="pt-2">
                             <Link
                               to={`/track-order?id=${order.id}`}
-                              className="btn btn-outline-primary btn-sm w-100 d-flex align-items-center justify-content-center gap-2"
+                              className="btn btn-primary btn-sm w-100 d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold shadow-sm"
                             >
                               <FaTruck size={14} />
                               Track Shipment
