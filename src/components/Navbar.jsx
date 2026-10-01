@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import {
   FaShoppingCart,
@@ -13,6 +13,16 @@ import {
 
 function Navbar({ cartCount = 0, wishlistCount = 0, ordersCount = 0 }) {
   const { user, isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleAuthNav = (e, path, message) => {
+    if (!isAuthenticated) {
+      e.preventDefault();
+      navigate("/login", {
+        state: { from: { pathname: path }, message },
+      });
+    }
+  };
 
   const linkClass = ({ isActive }) =>
     `nav-link px-3 py-1.5 rounded-pill transition-all ${
@@ -68,27 +78,47 @@ function Navbar({ cartCount = 0, wishlistCount = 0, ordersCount = 0 }) {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/product" className={linkClass}>
+              <NavLink
+                to="/product"
+                onClick={(e) => handleAuthNav(e, "/product", "Please log in to browse the shop.")}
+                className={linkClass}
+              >
                 Shop
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/categories" className={linkClass}>
+              <NavLink
+                to="/categories"
+                onClick={(e) => handleAuthNav(e, "/categories", "Please log in to browse categories.")}
+                className={linkClass}
+              >
                 Categories
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/deals" className={linkClass}>
+              <NavLink
+                to="/deals"
+                onClick={(e) => handleAuthNav(e, "/deals", "Please log in to view deals.")}
+                className={linkClass}
+              >
                 Deals
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/best-sellers" className={linkClass}>
+              <NavLink
+                to="/best-sellers"
+                onClick={(e) => handleAuthNav(e, "/best-sellers", "Please log in to view best sellers.")}
+                className={linkClass}
+              >
                 Best Sellers
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/orders" className={linkClass}>
+              <NavLink
+                to="/orders"
+                onClick={(e) => handleAuthNav(e, "/orders", "Please log in to view your orders.")}
+                className={linkClass}
+              >
                 <span className="d-flex align-items-center gap-1">
                   <FaBoxOpen size={13} className="opacity-75" />
                   <span>My Orders</span>
@@ -115,6 +145,7 @@ function Navbar({ cartCount = 0, wishlistCount = 0, ordersCount = 0 }) {
             {/* Wishlist */}
             <NavLink
               to="/wishlist"
+              onClick={(e) => handleAuthNav(e, "/wishlist", "Please log in to view your wishlist.")}
               className={({ isActive }) =>
                 `nav-link px-3 py-1.5 rounded-pill d-flex align-items-center gap-1 transition-all ${
                   isActive ? "active text-white fw-semibold" : "text-white-80"
@@ -136,6 +167,7 @@ function Navbar({ cartCount = 0, wishlistCount = 0, ordersCount = 0 }) {
             {/* Cart Button */}
             <NavLink
               to="/cart"
+              onClick={(e) => handleAuthNav(e, "/cart", "Please log in to view your cart.")}
               className={({ isActive }) =>
                 `btn btn-sm d-flex align-items-center gap-2 rounded-pill px-3 py-1.5 ${
                   isActive
@@ -158,23 +190,34 @@ function Navbar({ cartCount = 0, wishlistCount = 0, ordersCount = 0 }) {
               <div className="d-flex align-items-center gap-2 ms-xl-1">
                 <NavLink
                   to="/profile"
-                  className="btn btn-sm btn-primary d-flex align-items-center gap-2 rounded-pill px-3 py-1.5"
+                  className="btn btn-sm btn-primary d-flex align-items-center gap-2 rounded-pill px-3 py-1.5 shadow-sm"
                   title="View My Profile"
                 >
-                  {user?.role === "athlete" ? (
+                  {user?.avatar ? (
+                    <img
+                      src={user.avatar}
+                      alt={user?.name || "Profile"}
+                      className="rounded-circle border border-white"
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        objectFit: "cover",
+                      }}
+                    />
+                  ) : user?.role === "athlete" ? (
                     <FaRunning size={14} />
                   ) : (
                     <FaUserCircle size={14} />
                   )}
-                  <span>{user?.name?.split(" ")[0] || "Account"}</span>
+                  <span>My Profile</span>
                 </NavLink>
                 <button
                   onClick={logout}
-                  className="btn btn-sm btn-outline-secondary text-white-50 d-flex align-items-center gap-1 rounded-pill px-2 py-1.5"
+                  className="btn btn-link text-white-50 d-flex align-items-center gap-1 text-decoration-none border-0 p-1 px-2 logout-btn-clean"
                   title="Log Out"
                 >
-                  <FaSignOutAlt size={12} />
-                  <span className="d-none d-xxl-inline">Logout</span>
+                  <FaSignOutAlt size={13} />
+                  <span>Logout</span>
                 </button>
               </div>
             ) : (

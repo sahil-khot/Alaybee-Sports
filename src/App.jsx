@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useMemo, useState, useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -18,10 +18,14 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Profile from "./pages/Profile.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
-import { AuthProvider } from "./context/AuthContext.jsx";
+import { useAuth } from "./context/AuthContext.jsx";
 import { products } from "./data/products.js";
 
 function App() {
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [cart, setCart] = useState(() => {
     try {
       const saved = localStorage.getItem("alaybee_cart");
@@ -77,6 +81,16 @@ function App() {
   }, [orders]);
 
   const addToCart = (product) => {
+    if (!isAuthenticated) {
+      navigate("/login", {
+        state: {
+          from: location,
+          message: "Please log in to add items to your cart.",
+        },
+      });
+      return;
+    }
+
     setCart((currentCart) => {
       const existingItem = currentCart.find((item) => item.id === product.id);
 
@@ -119,6 +133,16 @@ function App() {
   };
 
   const toggleWishlist = (product) => {
+    if (!isAuthenticated) {
+      navigate("/login", {
+        state: {
+          from: location,
+          message: "Please log in to save items to your wishlist.",
+        },
+      });
+      return;
+    }
+
     setWishlist((currentWishlist) => {
       const exists = currentWishlist.some((item) => item.id === product.id);
       return exists
@@ -138,9 +162,8 @@ function App() {
   );
 
   return (
-    <AuthProvider>
-      <div className="d-flex flex-column min-vh-100">
-        <Navbar cartCount={cartCount} wishlistCount={wishlist.length} ordersCount={orders.length} />
+    <div className="d-flex flex-column min-vh-100">
+      <Navbar cartCount={cartCount} wishlistCount={wishlist.length} ordersCount={orders.length} />
 
         <main className="flex-grow-1">
           <Routes>
@@ -204,8 +227,22 @@ function App() {
                 />
               }
             />
-            <Route path="/orders" element={<Orders orders={orders} />} />
-            <Route path="/my-orders" element={<Orders orders={orders} />} />
+            <Route
+              path="/orders"
+              element={
+                <ProtectedRoute>
+                  <Orders orders={orders} />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/my-orders"
+              element={
+                <ProtectedRoute>
+                  <Orders orders={orders} />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/cart"
@@ -221,12 +258,14 @@ function App() {
             <Route
               path="/checkout"
               element={
-                <Checkout
-                  cart={cart}
-                  subtotal={subtotal}
-                  onPlaceOrder={addOrder}
-                  onClearCart={clearCart}
-                />
+                <ProtectedRoute>
+                  <Checkout
+                    cart={cart}
+                    subtotal={subtotal}
+                    onPlaceOrder={addOrder}
+                    onClearCart={clearCart}
+                  />
+                </ProtectedRoute>
               }
             />
             <Route
@@ -257,7 +296,6 @@ function App() {
 
         <Footer />
       </div>
-    </AuthProvider>
   );
 }
 

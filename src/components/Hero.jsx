@@ -1,7 +1,37 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaShieldAlt } from "react-icons/fa";
+import { useAuth } from "../context/AuthContext";
 
 function Hero() {
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  const handleShopNow = () => {
+    if (!isAuthenticated) {
+      navigate("/login", {
+        state: {
+          from: { pathname: "/product" },
+          message: "Please log in to access the shop.",
+        },
+      });
+    } else {
+      navigate("/product");
+    }
+  };
+
+  const handleExploreCategories = () => {
+    if (!isAuthenticated) {
+      navigate("/login", {
+        state: {
+          from: { pathname: "/categories" },
+          message: "Please log in to explore categories.",
+        },
+      });
+    } else {
+      navigate("/categories");
+    }
+  };
+
   return (
     <section className="hero-banner">
       {/* Dark overlay makes the white text ultra-readable over the cycling photo */}
@@ -58,16 +88,21 @@ function Hero() {
             at the best prices across India.
           </p>
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <Link to="/product" className="btn btn-primary btn-lg px-4 shadow">
+            <button
+              type="button"
+              onClick={handleShopNow}
+              className="btn btn-primary btn-lg px-4 shadow d-inline-flex align-items-center gap-2"
+            >
               Shop Now <FaArrowRight size={14} />
-            </Link>
-            <Link
-              to="/categories"
+            </button>
+            <button
+              type="button"
+              onClick={handleExploreCategories}
               className="btn btn-outline-light btn-lg px-4"
               style={{ borderRadius: "0.75rem" }}
             >
               Explore Categories
-            </Link>
+            </button>
           </div>
         </div>
       </div>

@@ -73,6 +73,13 @@ function Login() {
               <p className="body-text">Log in to your Alaybee Sports account</p>
             </div>
 
+            {location.state?.message && (
+              <div className="alert alert-info py-2.5 px-3 small rounded-3 mb-3 d-flex align-items-center gap-2 border-0 shadow-sm" style={{ backgroundColor: "#e0f2fe", color: "#0369a1" }}>
+                <span>🔒</span>
+                <span className="fw-semibold">{location.state.message}</span>
+              </div>
+            )}
+
             {/* Quick Demo Login Box */}
             <div className="demo-account-box p-3 mb-4">
               <div className="d-flex align-items-center justify-content-between mb-2">

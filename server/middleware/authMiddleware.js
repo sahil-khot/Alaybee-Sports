@@ -38,8 +38,9 @@ const protect = async (req, res, next) => {
               role: fallback.role,
               phone: fallback.phone,
               city: fallback.city,
+              avatar: fallback.avatar || "",
             }
-          : { _id: decoded.id, email: decoded.email, role: decoded.role };
+          : { _id: decoded.id, email: decoded.email, role: decoded.role, avatar: "" };
       }
 
       next();

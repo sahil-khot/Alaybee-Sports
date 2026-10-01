@@ -41,6 +41,7 @@ const register = async (req, res) => {
         role: role === "athlete" ? "athlete" : "user",
         phone: phone || "",
         city: city || "",
+        avatar: req.body.avatar || "",
       });
 
       const token = generateToken(user._id, user.role, user.email);
@@ -56,6 +57,7 @@ const register = async (req, res) => {
           role: user.role,
           phone: user.phone,
           city: user.city,
+          avatar: user.avatar || "",
         },
       });
     }
@@ -73,6 +75,7 @@ const register = async (req, res) => {
         role: role === "athlete" ? "athlete" : "user",
         phone: phone || "",
         city: city || "",
+        avatar: req.body.avatar || "",
       },
     });
   } catch (error) {
@@ -111,6 +114,7 @@ const login = async (req, res) => {
             role: user.role,
             phone: user.phone,
             city: user.city,
+            avatar: user.avatar || "",
           },
         });
       }
@@ -132,6 +136,7 @@ const login = async (req, res) => {
             role: dummy.role,
             phone: dummy.phone,
             city: dummy.city,
+            avatar: dummy.avatar || "",
           },
         });
       }
@@ -157,6 +162,7 @@ const login = async (req, res) => {
           role: dummy.role,
           phone: dummy.phone,
           city: dummy.city,
+          avatar: dummy.avatar || "",
         },
       });
     }
@@ -189,7 +195,7 @@ const getMe = async (req, res) => {
 // @access  Private (Protected by JWT)
 const updateProfile = async (req, res) => {
   try {
-    const { name, phone, city } = req.body;
+    const { name, phone, city, avatar } = req.body;
 
     if (isDbConnected() && req.user._id) {
       const user = await User.findById(req.user._id);
@@ -197,6 +203,9 @@ const updateProfile = async (req, res) => {
         user.name = name || user.name;
         user.phone = phone !== undefined ? phone : user.phone;
         user.city = city !== undefined ? city : user.city;
+        if (avatar !== undefined) {
+          user.avatar = avatar;
+        }
         const updated = await user.save();
 
         return res.json({
@@ -209,6 +218,7 @@ const updateProfile = async (req, res) => {
             role: updated.role,
             phone: updated.phone,
             city: updated.city,
+            avatar: updated.avatar || "",
           },
         });
       }
@@ -220,6 +230,7 @@ const updateProfile = async (req, res) => {
       name: name || req.user.name,
       phone: phone !== undefined ? phone : req.user.phone,
       city: city !== undefined ? city : req.user.city,
+      avatar: avatar !== undefined ? avatar : req.user?.avatar || "",
     };
 
     return res.json({

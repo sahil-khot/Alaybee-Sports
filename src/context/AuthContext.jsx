@@ -20,7 +20,11 @@ export const AuthProvider = ({ children }) => {
       try {
         const data = await api.getMe();
         if (data.success && data.user) {
-          setUser(data.user);
+          const savedAvatar = localStorage.getItem("alaybee_avatar_" + data.user.email);
+          setUser({
+            ...data.user,
+            avatar: data.user.avatar || savedAvatar || "",
+          });
         }
       } catch (err) {
         console.warn("Session restore failed, logging out:", err.message);
@@ -40,7 +44,11 @@ export const AuthProvider = ({ children }) => {
     if (data.token) {
       setAuthToken(data.token);
       setToken(data.token);
-      setUser(data.user);
+      const savedAvatar = localStorage.getItem("alaybee_avatar_" + data.user.email);
+      setUser({
+        ...data.user,
+        avatar: data.user.avatar || savedAvatar || "",
+      });
     }
     return data;
   };
@@ -50,6 +58,9 @@ export const AuthProvider = ({ children }) => {
     if (data.token) {
       setAuthToken(data.token);
       setToken(data.token);
+      if (userData.avatar) {
+        localStorage.setItem("alaybee_avatar_" + data.user.email, userData.avatar);
+      }
       setUser(data.user);
     }
     return data;
@@ -62,11 +73,35 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateProfile = async (profileData) => {
-    const data = await api.updateProfile(profileData);
-    if (data.success && data.user) {
-      setUser(data.user);
+    try {
+      const data = await api.updateProfile(profileData);
+      if (data.success && data.user) {
+        if (profileData.avatar !== undefined) {
+          if (profileData.avatar) {
+            localStorage.setItem("alaybee_avatar_" + data.user.email, profileData.avatar);
+          } else {
+            localStorage.removeItem("alaybee_avatar_" + data.user.email);
+          }
+        }
+        setUser(data.user);
+        return data;
+      }
+    } catch (err) {
+      // In case server has not reloaded, persist in local state
+      if (user) {
+        if (profileData.avatar !== undefined) {
+          if (profileData.avatar) {
+            localStorage.setItem("alaybee_avatar_" + user.email, profileData.avatar);
+          } else {
+            localStorage.removeItem("alaybee_avatar_" + user.email);
+          }
+        }
+        const fallbackUser = { ...user, ...profileData };
+        setUser(fallbackUser);
+        return { success: true, user: fallbackUser };
+      }
+      throw err;
     }
-    return data;
   };
 
   return (

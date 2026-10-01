@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 import {
   FaStar,
   FaRegStar,
@@ -22,9 +24,12 @@ function ProductDetailModal({
   onToggleWishlist,
   isSaved,
 }) {
+  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
   const [quantity, setQuantity] = useState(1);
   const [reviewsList, setReviewsList] = useState(product?.reviews || []);
-  const [reviewName, setReviewName] = useState("");
+  const [reviewName, setReviewName] = useState(user?.name || "");
   const [reviewComment, setReviewComment] = useState("");
   const [reviewRating, setReviewRating] = useState(5);
   const [addedNotice, setAddedNotice] = useState(false);
@@ -50,6 +55,17 @@ function ProductDetailModal({
 
   const handleAddReview = (e) => {
     e.preventDefault();
+    if (!isAuthenticated) {
+      onClose();
+      navigate("/login", {
+        state: {
+          from: { pathname: "/product" },
+          message: "Please log in to submit a review.",
+        },
+      });
+      return;
+    }
+
     if (!reviewName.trim() || !reviewComment.trim()) return;
 
     const newReview = {
@@ -61,17 +77,41 @@ function ProductDetailModal({
     };
 
     setReviewsList([newReview, ...reviewsList]);
-    setReviewName("");
     setReviewComment("");
     setReviewRating(5);
   };
 
   const handleAddToCartClick = () => {
+    if (!isAuthenticated) {
+      onClose();
+      navigate("/login", {
+        state: {
+          from: { pathname: "/product" },
+          message: "Please log in to add items to your cart.",
+        },
+      });
+      return;
+    }
+
     for (let i = 0; i < quantity; i++) {
       onAddToCart(product);
     }
     setAddedNotice(true);
     setTimeout(() => setAddedNotice(false), 2000);
+  };
+
+  const handleToggleWishlistClick = () => {
+    if (!isAuthenticated) {
+      onClose();
+      navigate("/login", {
+        state: {
+          from: { pathname: "/product" },
+          message: "Please log in to save items to your wishlist.",
+        },
+      });
+      return;
+    }
+    onToggleWishlist(product);
   };
 
   return (
@@ -224,7 +264,7 @@ function ProductDetailModal({
                   <button
                     type="button"
                     className={`btn ${isSaved ? "btn-danger" : "btn-outline-secondary"} p-2 px-3`}
-                    onClick={() => onToggleWishlist(product)}
+                    onClick={handleToggleWishlistClick}
                     title={isSaved ? "Remove from Wishlist" : "Save to Wishlist"}
                   >
                     {isSaved ? <FaHeart /> : <FaRegHeart />}
@@ -236,85 +276,108 @@ function ProductDetailModal({
         </div>
 
         {/* Customer Reviews Section */}
-        <div className="border-top pt-4 mt-2">
+        <div className="border-top pt-4 mt-3">
           <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-            <h5 className="fw-bold mb-0">Customer Reviews & Ratings</h5>
-            <span className="badge bg-light text-dark border">
+            <div>
+              <h5 className="fw-bold mb-0">Customer Reviews & Ratings</h5>
+              <span className="text-muted small">Real feedback from verified athletes & players</span>
+            </div>
+            <span className="badge bg-light text-dark border px-3 py-2 rounded-pill">
               {reviewsList.length} verified reviews
             </span>
           </div>
 
-          <div className="row g-3">
+          <div className="row g-3 align-items-stretch">
             {/* Reviews display */}
-            <div className="col-lg-7">
-              {reviewsList.length === 0 ? (
-                <p className="text-muted small">
-                  No reviews yet. Be the first to review this product!
-                </p>
-              ) : (
-                <div className="d-flex flex-column gap-2" style={{ maxHeight: "280px", overflowY: "auto" }}>
-                  {reviewsList.map((rev) => (
-                    <div key={rev.id} className="p-3 bg-light rounded-3 border">
-                      <div className="d-flex justify-content-between align-items-center mb-1">
-                        <span className="fw-semibold text-dark small d-flex align-items-center gap-1">
-                          <FaUserCheck className="text-success" size={13} /> {rev.author}
-                        </span>
-                        <span className="text-muted small" style={{ fontSize: "0.75rem" }}>
-                          {rev.date}
-                        </span>
-                      </div>
-                      <div className="star-rating mb-1" style={{ fontSize: "0.8rem" }}>
-                        {renderStars(rev.rating)}
-                      </div>
-                      <p className="text-secondary small mb-0">{rev.comment}</p>
-                    </div>
-                  ))}
+            <div className="col-lg-7 d-flex">
+              <div className="p-3 border rounded-3 bg-white w-100 d-flex flex-column shadow-sm">
+                <div className="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                  <h6 className="fw-bold mb-0 text-dark">Verified Ratings & Comments</h6>
+                  <span className="small text-muted">{reviewsList.length} reviews</span>
                 </div>
-              )}
+
+                <div
+                  className="d-flex flex-column gap-2 flex-grow-1 custom-modal-reviews-scroll pe-2"
+                  style={{ maxHeight: "310px", minHeight: "260px", overflowY: "auto" }}
+                >
+                  {reviewsList.length === 0 ? (
+                    <div className="h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+                      <p className="text-muted small mb-0">
+                        No reviews yet. Be the first to share your experience with this kit!
+                      </p>
+                    </div>
+                  ) : (
+                    reviewsList.map((rev) => (
+                      <div key={rev.id} className="p-2.5 px-3 bg-light rounded-3 border">
+                        <div className="d-flex justify-content-between align-items-center mb-1">
+                          <span className="fw-semibold text-dark small d-flex align-items-center gap-1.5">
+                            <FaUserCheck className="text-success" size={13} /> {rev.author}
+                          </span>
+                          <span className="text-muted" style={{ fontSize: "0.74rem" }}>
+                            {rev.date}
+                          </span>
+                        </div>
+                        <div className="star-rating mb-1" style={{ fontSize: "0.8rem" }}>
+                          {renderStars(rev.rating)}
+                        </div>
+                        <p className="text-secondary small mb-0" style={{ fontSize: "0.83rem", lineHeight: 1.45 }}>
+                          {rev.comment}
+                        </p>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
             </div>
 
             {/* Quick Add Review Form */}
-            <div className="col-lg-5">
-              <div className="p-3 border rounded-3 bg-white">
-                <h6 className="fw-bold mb-2">Write a Review</h6>
-                <form onSubmit={handleAddReview}>
-                  <div className="mb-2">
-                    <label className="form-label small text-muted mb-1">Your Name</label>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="e.g. Alex"
-                      value={reviewName}
-                      onChange={(e) => setReviewName(e.target.value)}
-                      required
-                    />
+            <div className="col-lg-5 d-flex">
+              <div className="p-3 border rounded-3 bg-white w-100 d-flex flex-column shadow-sm">
+                <div className="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                  <h6 className="fw-bold mb-0 text-dark">Write a Review</h6>
+                  <span className="badge bg-primary-subtle text-primary small">Share Experience</span>
+                </div>
+
+                <form onSubmit={handleAddReview} className="d-flex flex-column flex-grow-1 justify-content-between">
+                  <div>
+                    <div className="mb-2">
+                      <label className="form-label small text-muted mb-1">Your Name</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-sm"
+                        placeholder="e.g. Alex"
+                        value={reviewName}
+                        onChange={(e) => setReviewName(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="mb-2">
+                      <label className="form-label small text-muted mb-1">Rating</label>
+                      <select
+                        className="form-select form-select-sm"
+                        value={reviewRating}
+                        onChange={(e) => setReviewRating(e.target.value)}
+                      >
+                        <option value="5">⭐⭐⭐⭐⭐ 5 Stars - Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ 4 Stars - Very Good</option>
+                        <option value="3">⭐⭐⭐ 3 Stars - Good</option>
+                        <option value="2">⭐⭐ 2 Stars - Fair</option>
+                        <option value="1">⭐ 1 Star - Poor</option>
+                      </select>
+                    </div>
+                    <div className="mb-2">
+                      <label className="form-label small text-muted mb-1">Your Feedback</label>
+                      <textarea
+                        rows="2"
+                        className="form-control form-control-sm"
+                        placeholder="Share your experience with this kit..."
+                        value={reviewComment}
+                        onChange={(e) => setReviewComment(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="mb-2">
-                    <label className="form-label small text-muted mb-1">Rating</label>
-                    <select
-                      className="form-select form-select-sm"
-                      value={reviewRating}
-                      onChange={(e) => setReviewRating(e.target.value)}
-                    >
-                      <option value="5">⭐⭐⭐⭐⭐ 5 Stars - Excellent</option>
-                      <option value="4">⭐⭐⭐⭐ 4 Stars - Very Good</option>
-                      <option value="3">⭐⭐⭐ 3 Stars - Good</option>
-                      <option value="2">⭐⭐ 2 Stars - Fair</option>
-                      <option value="1">⭐ 1 Star - Poor</option>
-                    </select>
-                  </div>
-                  <div className="mb-2">
-                    <label className="form-label small text-muted mb-1">Your Feedback</label>
-                    <textarea
-                      rows="2"
-                      className="form-control form-control-sm"
-                      placeholder="Share your experience with this kit..."
-                      value={reviewComment}
-                      onChange={(e) => setReviewComment(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <button type="submit" className="btn btn-outline-dark btn-sm w-100">
+                  <button type="submit" className="btn btn-outline-dark btn-sm w-100 mt-auto py-2">
                     Submit Review
                   </button>
                 </form>

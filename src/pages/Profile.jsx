@@ -1,19 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import { FaCamera, FaTrashAlt, FaCheck, FaRunning, FaUserCircle, FaUpload } from "react-icons/fa";
 import api from "../services/api";
+
+const SPORTS_AVATARS = [
+  { name: "Cricket Pro", url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" },
+  { name: "Footballer", url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" },
+  { name: "Runner", url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" },
+  { name: "Basketball Ace", url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" },
+  { name: "Fitness Coach", url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" },
+  { name: "Tennis Star", url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" },
+];
 
 function Profile() {
   const { user, logout, updateProfile } = useAuth();
+  const fileInputRef = useRef(null);
 
   const [editMode, setEditMode] = useState(false);
   const [formData, setFormData] = useState({
     name: user?.name || "",
     phone: user?.phone || "",
     city: user?.city || "",
+    avatar: user?.avatar || "",
   });
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
+  const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const [athletePerks, setAthletePerks] = useState([]);
   const [authStatus, setAuthStatus] = useState(null);
 
@@ -23,6 +36,7 @@ function Profile() {
         name: user.name || "",
         phone: user.phone || "",
         city: user.city || "",
+        avatar: user.avatar || "",
       });
 
       // Test authorized backend endpoint
@@ -53,6 +67,89 @@ function Profile() {
     }));
   };
 
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      setMessage("Please select a valid image file (JPEG, PNG, WebP).");
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      setMessage("Image size should be less than 5MB.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        const maxDim = 320;
+        let width = img.width;
+        let height = img.height;
+        if (width > height) {
+          if (width > maxDim) {
+            height = Math.round((height * maxDim) / width);
+            width = maxDim;
+          }
+        } else {
+          if (height > maxDim) {
+            width = Math.round((width * maxDim) / height);
+            height = maxDim;
+          }
+        }
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, width, height);
+        const compressedBase64 = canvas.toDataURL("image/jpeg", 0.88);
+
+        applyNewAvatar(compressedBase64);
+      };
+      img.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+    e.target.value = "";
+  };
+
+  const applyNewAvatar = async (avatarUrl) => {
+    setSaving(true);
+    setMessage("");
+    try {
+      await updateProfile({
+        ...formData,
+        avatar: avatarUrl,
+      });
+      setFormData((prev) => ({ ...prev, avatar: avatarUrl }));
+      setMessage("Profile picture updated successfully!");
+      setShowAvatarPicker(false);
+    } catch (err) {
+      setMessage(err.message || "Failed to update profile picture.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleRemoveAvatar = async () => {
+    setSaving(true);
+    setMessage("");
+    try {
+      await updateProfile({
+        ...formData,
+        avatar: "",
+      });
+      setFormData((prev) => ({ ...prev, avatar: "" }));
+      setMessage("Profile picture removed.");
+      setShowAvatarPicker(false);
+    } catch (err) {
+      setMessage(err.message || "Failed to remove profile picture.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
   const handleSave = async (e) => {
     e.preventDefault();
     setSaving(true);
@@ -79,7 +176,7 @@ function Profile() {
           </span>
           <h1 className="main-heading mb-1">User Profile & Access</h1>
           <p className="body-text mb-0">
-            Manage your credentials and view authorized sports member privileges.
+            Manage your credentials, profile picture, and sports member privileges.
           </p>
         </div>
 
@@ -103,23 +200,114 @@ function Profile() {
         </div>
       )}
 
+      {/* Hidden File Input */}
+      <input
+        type="file"
+        ref={fileInputRef}
+        onChange={handleImageUpload}
+        accept="image/*"
+        className="d-none"
+      />
+
       <div className="row g-4">
         {/* Left Column: Profile Card */}
         <div className="col-lg-5">
           <div className="section-card p-4">
             <div className="text-center pb-3 border-bottom mb-3">
+              {/* Profile Avatar with Camera Trigger */}
               <div
-                className="rounded-circle d-inline-flex align-items-center justify-content-center text-white fw-bold mb-3 shadow-sm"
-                style={{
-                  width: "72px",
-                  height: "72px",
-                  fontSize: "28px",
-                  backgroundColor:
-                    user?.role === "athlete" ? "#0d6efd" : "#0d1b2a",
-                }}
+                className="profile-avatar-container mb-3"
+                onClick={() => fileInputRef.current?.click()}
+                title="Click to upload or change profile picture"
               >
-                {user?.name ? user.name.charAt(0).toUpperCase() : "U"}
+                {user?.avatar ? (
+                  <img
+                    src={user.avatar}
+                    alt={user.name || "User Avatar"}
+                    className="rounded-circle shadow-sm border border-3 border-primary-subtle"
+                    style={{
+                      width: "88px",
+                      height: "88px",
+                      objectFit: "cover",
+                    }}
+                  />
+                ) : (
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center text-white fw-bold shadow-sm"
+                    style={{
+                      width: "88px",
+                      height: "88px",
+                      fontSize: "32px",
+                      backgroundColor:
+                        user?.role === "athlete" ? "#0d6efd" : "#0d1b2a",
+                    }}
+                  >
+                    {user?.name ? user.name.charAt(0).toUpperCase() : "U"}
+                  </div>
+                )}
+                <div className="avatar-overlay">
+                  <FaCamera size={18} className="mb-1" />
+                  <span>Change</span>
+                </div>
               </div>
+
+              {/* Profile Picture Action Buttons */}
+              <div className="d-flex justify-content-center gap-2 mb-3 flex-wrap">
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={saving}
+                  className="btn btn-outline-primary btn-sm rounded-pill d-inline-flex align-items-center gap-1.5 px-3 py-1"
+                >
+                  <FaUpload size={11} /> Upload Photo
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowAvatarPicker(!showAvatarPicker)}
+                  className="btn btn-outline-secondary btn-sm rounded-pill d-inline-flex align-items-center gap-1 px-3 py-1"
+                >
+                  Sports Avatars
+                </button>
+                {user?.avatar && (
+                  <button
+                    type="button"
+                    onClick={handleRemoveAvatar}
+                    disabled={saving}
+                    className="btn btn-outline-danger btn-sm rounded-pill p-1 px-2"
+                    title="Remove profile picture"
+                  >
+                    <FaTrashAlt size={11} />
+                  </button>
+                )}
+              </div>
+
+              {/* Sports Avatars Preset Drawer */}
+              {showAvatarPicker && (
+                <div className="p-3 bg-light rounded-3 border mb-3 text-start">
+                  <span className="small fw-semibold text-muted d-block mb-2">
+                    Pick a Sports Avatar:
+                  </span>
+                  <div className="d-flex justify-content-center gap-2 flex-wrap">
+                    {SPORTS_AVATARS.map((preset) => (
+                      <button
+                        key={preset.name}
+                        type="button"
+                        onClick={() => applyNewAvatar(preset.url)}
+                        className={`avatar-preset-btn ${user?.avatar === preset.url ? "active" : ""}`}
+                        title={preset.name}
+                      >
+                        <img
+                          src={preset.url}
+                          alt={preset.name}
+                          className="w-100 h-100"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <h2 className="card-heading mb-1" style={{ fontSize: "20px" }}>
                 {user?.name}
               </h2>

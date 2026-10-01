@@ -6,6 +6,7 @@ const dummyAccounts = [
     role: "user",
     phone: "+91 98765 43210",
     city: "Bengaluru",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
     description: "Standard registered sports customer / club member",
   },
   {
@@ -15,6 +16,7 @@ const dummyAccounts = [
     role: "athlete",
     phone: "+91 91234 56789",
     city: "Mumbai",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
     description: "Pro sports athlete account with specialized sports gear access",
   },
 ];

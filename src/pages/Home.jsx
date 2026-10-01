@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import ProductDetailModal from "../components/ProductDetailModal.jsx";
+import { useAuth } from "../context/AuthContext.jsx";
 import {
   FaArrowRight,
   FaShieldAlt,
@@ -13,6 +14,8 @@ import {
 } from "react-icons/fa";
 
 function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const categories = [
@@ -86,20 +89,46 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
             </span>
             <h2 className="fw-bold mb-0">Shop By Categories</h2>
           </div>
-          <Link
-            to="/categories"
+          <button
+            type="button"
+            onClick={() => {
+              if (!isAuthenticated) {
+                navigate("/login", {
+                  state: {
+                    from: { pathname: "/categories" },
+                    message: "Please log in to explore all categories.",
+                  },
+                });
+              } else {
+                navigate("/categories");
+              }
+            }}
             className="btn btn-outline-dark btn-sm rounded-pill px-3 d-flex align-items-center gap-1"
           >
             View all categories <FaArrowRight size={12} />
-          </Link>
+          </button>
         </div>
 
         <div className="row g-3">
           {categories.map((cat) => (
             <div className="col-6 col-md-4 col-lg" key={cat.name}>
-              <Link
-                to={`/product?category=${encodeURIComponent(cat.name)}`}
+              <div
+                role="button"
+                onClick={() => {
+                  const targetPath = `/product?category=${encodeURIComponent(cat.name)}`;
+                  if (!isAuthenticated) {
+                    navigate("/login", {
+                      state: {
+                        from: { pathname: targetPath },
+                        message: "Please log in to browse this category.",
+                      },
+                    });
+                  } else {
+                    navigate(targetPath);
+                  }
+                }}
                 className="card h-100 border-0 shadow-sm hover-card rounded-4 overflow-hidden text-center text-decoration-none category-clickable-card"
+                style={{ cursor: "pointer" }}
                 title={`Shop ${cat.name} gear`}
               >
                 <div style={{ height: "130px", overflow: "hidden" }}>
@@ -122,7 +151,7 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
                     {cat.itemsCount}
                   </span>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -138,12 +167,24 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
               </span>
               <h2 className="fw-bold mb-0">Featured Products</h2>
             </div>
-            <Link
-              to="/product"
+            <button
+              type="button"
+              onClick={() => {
+                if (!isAuthenticated) {
+                  navigate("/login", {
+                    state: {
+                      from: { pathname: "/product" },
+                      message: "Please log in to browse all items.",
+                    },
+                  });
+                } else {
+                  navigate("/product");
+                }
+              }}
               className="btn btn-outline-dark btn-sm rounded-pill px-3 d-flex align-items-center gap-1"
             >
               Browse all items <FaArrowRight size={12} />
-            </Link>
+            </button>
           </div>
 
           <div className="row g-4">
@@ -264,12 +305,24 @@ function Home({ products, onAddToCart, onToggleWishlist, wishlist }) {
             Explore the latest gear for every game and every level of sport.
             Direct from manufacturer prices with nationwide delivery.
           </p>
-          <Link
-            to="/product"
-            className="btn btn-primary btn-lg px-4 shadow rounded-pill"
+          <button
+            type="button"
+            onClick={() => {
+              if (!isAuthenticated) {
+                navigate("/login", {
+                  state: {
+                    from: { pathname: "/product" },
+                    message: "Please log in to shop the collection.",
+                  },
+                });
+              } else {
+                navigate("/product");
+              }
+            }}
+            className="btn btn-primary btn-lg px-4 shadow rounded-pill d-inline-flex align-items-center gap-2"
           >
             Shop Collection <FaArrowRight size={14} />
-          </Link>
+          </button>
         </div>
       </section>
 
